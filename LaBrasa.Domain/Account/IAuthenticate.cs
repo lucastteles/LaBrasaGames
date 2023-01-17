@@ -10,7 +10,7 @@ namespace LaBrasa.Domain.Account
     {
         Task<bool> Authenticate(string email, string password);
 
-        Task<bool> RegisterUser(string email, string password);
+        Task<bool> RegisterUser(string email, string password, string telefone);
 
         Task Logout();
     }

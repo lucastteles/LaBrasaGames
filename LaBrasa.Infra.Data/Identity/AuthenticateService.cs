@@ -27,12 +27,14 @@ namespace LaBrasa.Infra.Data.Identity
             return result.Succeeded;
         }
 
-        public async Task<bool> RegisterUser(string email, string password)
+        public async Task<bool> RegisterUser(string email, string password, string phoneNumber)
         {
             var applicationUser = new ApplicationUser
             {
                 UserName = email,
                 Email = email,
+                PhoneNumber = phoneNumber
+
             };
 
             var result = await _userManager.CreateAsync(applicationUser, password);

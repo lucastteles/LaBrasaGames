@@ -27,8 +27,10 @@ namespace LaBrasa.Infra.Data.Identity
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = "usuario@localhost";
                 user.Email = "usuario@localhost";
+                user.PhoneNumber = "21975518853";  //////////////////////
                 user.NormalizedUserName = "USUARIO@LOCALHOST";
                 user.NormalizedEmail = "USUARIO@LOCALHOST";
+                user.PhoneNumberConfirmed = true;  ////////////////////
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
@@ -42,12 +44,14 @@ namespace LaBrasa.Infra.Data.Identity
             }
 
             if (_userManager.FindByEmailAsync("admin@localhost").Result == null)
-            {
+            { 
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = "admin@localhost";
                 user.Email = "admin@localhost";
+                user.PhoneNumber = "21975518853";  /////////////////////
                 user.NormalizedUserName = "ADMIN@LOCALHOST";
                 user.NormalizedEmail = "ADMIN@LOCALHOST";
+                user.PhoneNumberConfirmed = true;  /////////////////////
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
