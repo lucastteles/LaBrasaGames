@@ -3,7 +3,7 @@
 <style>
     .main-login {
         width: 70vw;
-        height: 70vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,10 +40,13 @@
 </style>
 <div class="main-login">
     <div class="left-login">
-        <h1>Faça Login<br> E entre para o nosso time</h1>
+        <h1>Faça Login<br> <font color ="white">E entre para o nosso time</font></h1>
+        <br />
         <img src="~/images/logobranco-1.png">
     </div>
     <div class="right-login">
+        <div class="col-md-5">
+            <font color="#FF8F1B"><h1>LOGIN</h1></font>
         <form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal">
 
             <input type="hidden" asp-for="ReturnUrl" />
@@ -52,19 +55,18 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Email" class="col-md-2 control-label"></label>
+               <font color ="#FF8F1B"><label  asp-for="Email" class="col-md-2 control-label"></label></font>
                 <div class="col-md-10">
-                    <input asp-for="Email" class="form-control" />
+                    <input asp-for="Email"  class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="form-group">
-
-                <label asp-for="Password" class="col-md-2 control-label"></label>
-
+                @*Nome em cima do fomulário*@
+               <font color ="#FF8F1B"><label asp-for="Password" class="col-md-2 control-label"></label></font>
                 <div class="col-md-10">
-                    <input asp-for="Password" class="form-control" />
+                    <input asp-for="Password"  class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
             </div>
@@ -80,6 +82,7 @@
             </p>
 
         </form>
+    </div>
     </div>
 </div>
 @section Scripts {
