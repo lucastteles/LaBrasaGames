@@ -28,6 +28,11 @@ namespace LaBrasa.MVC.Controllers
             return View();
         }
 
-     
+        public IActionResult Jogos()
+        {
+            return View();
+        }
+
+
     }
 }
