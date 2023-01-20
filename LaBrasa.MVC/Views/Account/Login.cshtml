@@ -23,7 +23,7 @@
 
 
 <style>
-    .left-login > h1{
+    .left-login > h1 {
         color: #FF8F1B;
     }
 </style>
@@ -38,51 +38,143 @@
         align-items: center;
     }
 </style>
+
+<style>
+    .card-login {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 35px;
+        background: #1C1C1C;
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px #5b5b58;
+    }
+</style>
+
+<style>
+    .col-md-10 > center h1 {
+        color: #FF8F1B;
+        margin: 0;
+    }
+</style>
+
+<style>
+    .text-field {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px;
+    }
+</style>
+
+
+<style>
+    .text-field >  input {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        background: #ffffff;
+        color: #FF8F1B;
+        font-size: 12pt;
+        box-shadow: 0px 10px 40px #00000056;
+        outline: none;
+        box-sizing: border-box;
+    }
+</style>
+
+<style>
+    .text-field > label{
+        color: white;
+        margin-bottom: 10px;
+    }
+</style>
+
+<style>
+    .text-field > input::placeholder{
+        color: black;
+       
+    }
+</style>
+
+<style>
+    .btn-login{
+        width: 90%;
+        padding: 16px 0px;
+        margin: 25px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 3px;
+        color: #1C1C1C;
+        background: #FF8F1B;
+        cursor: pointer;
+        box-shadow: 0px 10px 40px -12px #ff9933;
+
+    }
+</style>
+
+
+
+
 <div class="main-login">
     <div class="left-login">
-        <h1>Faça Login<br> <font color ="white">E entre para o nosso time</font></h1>
+        <h1>Faça Login<br> <font color="white">E entre para o nosso time</font></h1>
         <br />
         <img src="~/images/logobranco-1.png">
     </div>
     <div class="right-login">
-        <div class="col-md-5">
-            <font color="#FF8F1B"><h1>LOGIN</h1></font>
-        <form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal">
+        <div class="card-login">
+            <div class="col-md-10">
+                <center><h1>LOGIN</h1></center>
+                
+                <form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal">
 
-            <input type="hidden" asp-for="ReturnUrl" />
+                    <input type="hidden" asp-for="ReturnUrl" />
 
-            <div asp-validation-summary="All" class="text-danger">
+                    <div asp-validation-summary="All" class="text-danger">
+                    </div>
+
+                    <div class="text-field">
+                        <label for="Email" >Email</label>
+                       
+                            
+                                <input asp-for="Email" name="Email" placeholder="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            
+                        
+                    </div>
+
+                    <div class="text-field">
+                        @*Nome em cima do fomulário*@
+                        <label for="Password" >Senha</label>
+                        
+                            
+                                <input asp-for="Password" name="Password" placeholder="Senha" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            
+                        
+                    </div>
+                    
+                        <div class="form-group">
+                            
+                                <button type="submit" class="btn-login">Login</button>
+                            
+                        </div>
+                    
+                    <center><h4><<p>
+                        <a asp-action="Register">Cadastre-se agora</a>
+                    </p></h4>
+                    </center>
+                </form>
+               
             </div>
-
-            <div class="form-group">
-               <font color ="#FF8F1B"><label  asp-for="Email" class="col-md-2 control-label"></label></font>
-                <div class="col-md-10">
-                    <input asp-for="Email"  class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                @*Nome em cima do fomulário*@
-               <font color ="#FF8F1B"><label asp-for="Password" class="col-md-2 control-label"></label></font>
-                <div class="col-md-10">
-                    <input asp-for="Password"  class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <button type="submit" class="btn btn-outline-dark">Log in</button>
-                </div>
-            </div>
-
-            <p>
-                <a asp-action="Register">Cadastre-se agora</a>
-            </p>
-
-        </form>
-    </div>
+        </div>
     </div>
 </div>
 @section Scripts {
