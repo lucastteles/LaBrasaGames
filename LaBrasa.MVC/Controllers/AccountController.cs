@@ -52,7 +52,7 @@ namespace LaBrasa.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            var result = await _authenticate.RegisterUser(model.Email, model.Password, model.PhoneNumber);
+            var result = await _authenticate.RegisterUser(model.Email, model.Password, model.ConfirmPassword, model.PhoneNumber);
 
             if (result)
             {

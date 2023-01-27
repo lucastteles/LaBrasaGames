@@ -61,12 +61,12 @@
 
 <style>
     .text-field > input::placeholder {
-        color: 	#808080;
+        color: #808080;
     }
 </style>
 
 <style>
-    .btn-register{
+    .btn-register {
         width: 90%;
         padding: 16px 0px;
         margin: 25px;
@@ -80,14 +80,13 @@
         background: #FF8F1B;
         cursor: pointer;
         box-shadow: 0px 10px 40px -12px #ff9933;
-
     }
 </style>
 
 
 <div class="main-register">
     <div class="left-login">
-        <img src="~/images/logobranco-1.png"  height="292" width="302">
+        <img src="~/images/logobranco-1.png" height="292" width="302">
         <br />
 
 
@@ -106,17 +105,18 @@
                         <label for="PhoneNumber"> Celular</label>
                         <input asp-for="PhoneNumber" name="PhoneNumber" placeholder="Celular" class="form-control" />
                         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                    </div>
+                        </div>
+
                     <div class="text-field">
-                        <label for="Password"> Senha</label>
-                        <input asp-for="Password" name="Senha" placeholder="Senha" class="form-control" />
+                        <label asp-for="Password">Senha</label>
+                        <input asp-for="Password" placeholder="Senha" class="form-control" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
                     <div class="text-field">
                         <label for="Password">Confirmar Senha</label>
                         <input asp-for="ConfirmPassword" name="Confirmar Senha" placeholder="Confirmar Senha" class="form-control" />
                         <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                    </div>
+                        </div>
                     <button type="submit" class="btn-register">Cadastre-se</button>
                     <center><h4><a asp-controller="Account" asp-action="Login" class="btn btn-link"><h4>Já tem uma conta?</h4></a></h4></center>
                 </form>
@@ -126,6 +126,7 @@
 </div>
     @section Scripts {
     @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
 }
     }
+

@@ -27,13 +27,14 @@ namespace LaBrasa.Infra.Data.Identity
             return result.Succeeded;
         }
 
-        public async Task<bool> RegisterUser(string email, string password, string phoneNumber)
+        public async Task<bool> RegisterUser(string email, string password, string confirmpassword, string phoneNumber)
         {
             var applicationUser = new ApplicationUser
             {
                 UserName = email,
                 Email = email,
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                
 
             };
 

@@ -50,9 +50,21 @@ namespace LaBrasa.MVC
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=AdminAccount}/{action=Usuario}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Account}/{action=Login}/{id?}");
+
+
+
+                //endpoints.MapControllerRoute( //area Admin
+                //name: "areas",
+                //pattern: "{area:exists}/{controller=AdminAccount}/{action=Index}/{id?}");
+
             });
         }
     }
