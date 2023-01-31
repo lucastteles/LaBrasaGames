@@ -1,6 +1,11 @@
-﻿using LaBrasa.Domain.Account;
+﻿using Labrasa.Application.Interfaces;
+using Labrasa.Application.Mappings;
+using Labrasa.Application.Services;
+using LaBrasa.Domain.Account;
+using LaBrasa.Domain.Interfaces;
 using LaBrasa.Infra.Data.Context;
 using LaBrasa.Infra.Data.Identity;
+using LaBrasa.Infra.Data.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,6 +36,11 @@ namespace LaBrasa.Infra.Ioc
 
             services.AddScoped<IAuthenticate, AuthenticateService>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
+
+            services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
         }

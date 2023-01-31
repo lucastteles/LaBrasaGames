@@ -1,6 +1,7 @@
 ﻿using LaBrasa.Domain.Entidade;
 using LaBrasa.Domain.Interfaces;
 using LaBrasa.Infra.Data.Context;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace LaBrasa.Infra.Data.Repositories
     public class UsuarioRepository : IUsuarioRepository
     {
         ApplicationDbContext _usuarioContext;
+        IdentityDbContext _identityDbContext;
 
         public UsuarioRepository(ApplicationDbContext context)
         {
@@ -30,6 +32,7 @@ namespace LaBrasa.Infra.Data.Repositories
         {
             _usuarioContext.Add(usuario);
             await _usuarioContext.SaveChangesAsync();
+
             return usuario;
         }
 

@@ -30,13 +30,10 @@ namespace LaBrasa.Infra.Data.Identity
         public async Task<bool> RegisterUser(string email, string password, string confirmpassword, string phoneNumber)
         {
             var applicationUser = new ApplicationUser
-            {
-                
+            {                
                 UserName = email,
-                Email = email,
-                PhoneNumber = phoneNumber,
-                
-
+                Email = email, 
+                PhoneNumber = phoneNumber,               
             };
 
             var result = await _userManager.CreateAsync(applicationUser, password);
