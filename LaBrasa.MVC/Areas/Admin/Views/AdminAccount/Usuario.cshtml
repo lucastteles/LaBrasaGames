@@ -2,28 +2,36 @@
 
     @*@{
     ViewData["Title"] = "Usuarios";
-}*@
+    }*@
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Sobrenome)
+                Sobrenome
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco1)
+                Endereco
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                Idade
+            </th>
+
+            <th>
+                Genero
+            </th>
+
+            <th>
+                Email
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
+                Telefone
             </th>
-            
-            
+
+
             <th></th>
         </tr>
     </thead>
@@ -38,7 +46,13 @@
                     @Html.DisplayFor(modelItem => item.Sobrenome)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Endereco1)
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Idade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Email)
@@ -46,6 +60,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.PhoneNumber)
                 </td>
+                
 
             </tr>
         }

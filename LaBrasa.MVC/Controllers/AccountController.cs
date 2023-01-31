@@ -88,9 +88,11 @@ namespace LaBrasa.MVC.Controllers
             var usuarioDto = new UsuarioDTO()
             {
                 IdIdentity = Guid.Parse(applicationUser.Id),
-                Endereco = model.Endereco1,
+                Endereco = model.Endereco,
                 Nome = model.Nome,
-                Sobrenome = model.Sobrenome
+                Sobrenome = model.Sobrenome,
+                Genero = model.Genero,
+                Idade = model.Idade,
             };
 
             await _usuarioService.Adicionar(usuarioDto);

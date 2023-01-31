@@ -160,20 +160,27 @@
                     </div>
 
                     <div class="text-field">
-                        <label for="Endereco1">Endereco</label>
-                        <input asp-for="Endereco1" name="Endereco" placeholder="Confirmar Senha" class="form-control" />
-                        <span asp-validation-for="Endereco1" class="text-danger"></span>
+                        <label for="Endereco">Endereco</label>
+                        <input asp-for="Endereco" name="Endereco" placeholder="Endereço" class="form-control" />
+                        <span asp-validation-for="Endereco" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-field">
+                        <label for="PhoneNumber"> Celular</label>
+                        <input asp-for="PhoneNumber" name="PhoneNumber" placeholder="Celular" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-field">
+                        <label for="Idade"> Idade</label>
+                        <input asp-for="Idade" name="Idade" placeholder="Idade" class="form-control" />
+                        <span asp-validation-for="Idade" class="text-danger"></span>
                     </div>
 
                     <div class="text-field">
                         <label for="Email">Email</label>
                         <input asp-for="Email" name="Email" placeholder="Email" class="form-control" />
                         <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-                    <div class="text-field">
-                        <label for="PhoneNumber"> Celular</label>
-                        <input asp-for="PhoneNumber" name="PhoneNumber" placeholder="Celular" class="form-control" />
-                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                     </div>
 
 
@@ -191,14 +198,18 @@
                     <div class="campo">
                         <label>Gênero</label>
 
-                        <input type="radio" id="contactChoice1" name="contact" value="Feminino" />
-                        <label for="contactChoice1">Feminino</label>
+                        <input type="radio"  name="Genero" value="1" />
+                        <label for="Genero">Feminino</label>
+                        <span asp-validation-for="Genero" class="text-danger"></span>
 
-                        <input type="radio" id="contactChoice2" name="contact" value="Masculino" />
-                        <label for="contactChoice2">Masculino</label>
 
-                        <input type="radio" id="contactChoice3" name="contact" value="Outro" />
-                        <label for="contactChoice3">Outro</label>
+                        <input type="radio" name="Genero" value="2" />
+                        <label for="Genero">Masculino</label>
+                        <span asp-validation-for="Genero" class="text-danger"></span>
+
+                        <input type="radio"  name="Genero" value="3" />
+                        <label for="Genero">Outro</label>
+                        <span asp-validation-for="Genero" class="text-danger"></span>
                     </div>
 
                     <button type="submit" class="btn-register">Cadastre-se</button>

@@ -16,9 +16,11 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IUsuarioService _usuarioService;
 
-        public AdminAccountController(UserManager<ApplicationUser> userManager)
+        public AdminAccountController(UserManager<ApplicationUser> userManager,
+            IUsuarioService usuarioService)
         {
             this.userManager = userManager;
+            _usuarioService = usuarioService;
         }
 
         [HttpGet]
@@ -40,8 +42,12 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
                     Email = user.Email,
                     PhoneNumber = user.PhoneNumber,
                     Nome = usuarioDto?.Nome,
+                    Idade = usuarioDto?.Idade.ToString(),
                     Sobrenome = usuarioDto?.Sobrenome,
-                    Endereco1 = usuarioDto?.Endereco
+                    Endereco = usuarioDto?.Endereco,
+                    Genero = usuarioDto?.Genero.ToString(),
+
+                    
                 });
             }
 

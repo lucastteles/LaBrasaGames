@@ -5,10 +5,10 @@ namespace LaBrasa.MVC.ViewModels
     public class LoginViewModel
     {
 
-        [EmailAddress(ErrorMessage = "Invalid format email")]
+        [EmailAddress(ErrorMessage = "Email inválido")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Password is required")]
+        [Required(ErrorMessage = "Senha Inválida")]
         [StringLength(20, ErrorMessage = "The {0} must be at least {2} and at max " +
             "{1} characters long.", MinimumLength = 10)]
         [DataType(DataType.Password)]
