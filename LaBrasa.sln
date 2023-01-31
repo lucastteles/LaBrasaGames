@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaBrasa.Domain", "LaBrasa.Domain\LaBrasa.Domain.csproj", "{A575800F-32CE-4A1F-8ED8-8C5B14D969F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaBrasa.Domain", "LaBrasa.Domain\LaBrasa.Domain.csproj", "{A575800F-32CE-4A1F-8ED8-8C5B14D969F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaBrasa.Infra.Data", "LaBrasa.Infra.Data\LaBrasa.Infra.Data.csproj", "{1CF9001D-511A-4CD8-BFA2-3FB0E3831DCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaBrasa.Infra.Data", "LaBrasa.Infra.Data\LaBrasa.Infra.Data.csproj", "{1CF9001D-511A-4CD8-BFA2-3FB0E3831DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaBrasa.Infra.Ioc", "LaBrasa.Infra.Ioc\LaBrasa.Infra.Ioc.csproj", "{63B62FEE-5299-442C-B7FB-FA4BC9CC9CA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaBrasa.Infra.Ioc", "LaBrasa.Infra.Ioc\LaBrasa.Infra.Ioc.csproj", "{63B62FEE-5299-442C-B7FB-FA4BC9CC9CA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaBrasa.MVC", "LaBrasa.MVC\LaBrasa.MVC.csproj", "{A625FA4C-4EEA-49C2-BF70-CE7C710D12DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaBrasa.MVC", "LaBrasa.MVC\LaBrasa.MVC.csproj", "{A625FA4C-4EEA-49C2-BF70-CE7C710D12DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labrasa.Application", "Labrasa.Application\Labrasa.Application.csproj", "{D941080C-76FE-44A9-9546-9866D618E2BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A625FA4C-4EEA-49C2-BF70-CE7C710D12DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A625FA4C-4EEA-49C2-BF70-CE7C710D12DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A625FA4C-4EEA-49C2-BF70-CE7C710D12DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D941080C-76FE-44A9-9546-9866D618E2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D941080C-76FE-44A9-9546-9866D618E2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D941080C-76FE-44A9-9546-9866D618E2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D941080C-76FE-44A9-9546-9866D618E2BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,6 +31,7 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
                 {
                     Email = user.Email,
                     PhoneNumber = user.PhoneNumber
+
                 });
             }
 

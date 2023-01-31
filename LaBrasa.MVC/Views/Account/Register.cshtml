@@ -67,45 +67,52 @@
 
 <style>
     .campo {
-        margin-bottom: 1em;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: normal;
+        align-items: center;
     }
 </style>
+
 <style>
-    .campo label {
-        margin-bottom: 0.2em;
+    .campo > label {
+        margin-bottom: 10px;
         color: white;
         display: block;
     }
 </style>
 
 
-<style>
+@*<style>
     fieldset .grupo .campo {
-        float: left;
-        margin-right: 1em;
+    float: left;
+    margin-right: 10px;
     }
-</style>
+    </style>
 
-<style>
+    <style>
     .campo select, .campo textarea {
-        padding: 0.2em;
-        border: 1px solid white;
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-        display: block
+    padding: 0.2em;
+    border: 1px solid white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block
     }
-</style>
+    </style>
 
-<style>
+    <style>
     .campo select option {
-        padding-right: 1em;
+    padding-right: 10px;
+    }
+    </style>
+*@
+<style>
+    .campo > input {
+        background: white;
+        display: inline-flex;
     }
 </style>
 
-<style>
-    .campo input:focus, .campo select:focus, campo textarea:focus {
-        background: white;
-    }
-</style>
+
 
 
 <style>
@@ -139,6 +146,25 @@
             <div class="col-md-10">
                 <form asp-controller="Account" asp-action="Register" method="post">
                     <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="text-field">
+                        <label for="Nome">Nome</label>
+                        <input asp-for="Nome" name="Nome" placeholder="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-field">
+                        <label for="Sobrenome">Sobrenome</label>
+                        <input asp-for="Sobrenome" name="Sobrenome" placeholder="Sobrenome" class="form-control" />
+                        <span asp-validation-for="Sobrenome" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-field">
+                        <label for="Endereco1">Endereco</label>
+                        <input asp-for="Endereco1" name="Endereco" placeholder="Confirmar Senha" class="form-control" />
+                        <span asp-validation-for="Endereco1" class="text-danger"></span>
+                    </div>
+
                     <div class="text-field">
                         <label for="Email">Email</label>
                         <input asp-for="Email" name="Email" placeholder="Email" class="form-control" />
@@ -164,18 +190,16 @@
 
                     <div class="campo">
                         <label>Gênero</label>
-                        <label>
-                        @*<input asp-for="" type="radio" name="genero" value="feminino"> Feminino*@
-                        </label>
-                        <label>
-                        <input type="radio" name="genero" value="masculino"> Masculino
-                        </label>
-                        <label>
-                        <input type="radio" name="genero" value="outro"> Outro
-                        </label>
-                        </div>
 
-                    
+                        <input type="radio" id="contactChoice1" name="contact" value="Feminino" />
+                        <label for="contactChoice1">Feminino</label>
+
+                        <input type="radio" id="contactChoice2" name="contact" value="Masculino" />
+                        <label for="contactChoice2">Masculino</label>
+
+                        <input type="radio" id="contactChoice3" name="contact" value="Outro" />
+                        <label for="contactChoice3">Outro</label>
+                    </div>
 
                     <button type="submit" class="btn-register">Cadastre-se</button>
                     <center><h4><a asp-controller="Account" asp-action="Login" class="btn btn-link"><h4>Já tem uma conta?</h4></a></h4></center>

@@ -31,6 +31,7 @@ namespace LaBrasa.Infra.Data.Identity
         {
             var applicationUser = new ApplicationUser
             {
+                
                 UserName = email,
                 Email = email,
                 PhoneNumber = phoneNumber,

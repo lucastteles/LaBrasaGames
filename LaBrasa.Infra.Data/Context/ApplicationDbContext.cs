@@ -1,4 +1,5 @@
-﻿using LaBrasa.Infra.Data.Identity;
+﻿using LaBrasa.Domain.Entidade;
+using LaBrasa.Infra.Data.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,6 +16,8 @@ namespace LaBrasa.Infra.Data.Context
         {
 
         }
+
+        public DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
