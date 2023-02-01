@@ -101,6 +101,12 @@ namespace LaBrasa.MVC.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult Perfil()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Logout()
         {
             await _authenticate.Logout();
