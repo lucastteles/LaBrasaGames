@@ -12,6 +12,10 @@ namespace Labrasa.Application.DTOs
     {
         public Guid IdIdentity { get; set; }
 
+        public string Email { get; set; }
+
+        public string PhoneNumber { get; set; }
+
         [Required(ErrorMessage = "Informe o nome")]
         public string Nome { get; set; }
 

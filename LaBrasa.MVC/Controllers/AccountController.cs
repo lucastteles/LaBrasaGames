@@ -113,15 +113,9 @@ namespace LaBrasa.MVC.Controllers
         {
             var idUsuario = TempData["cliente"].ToString();
 
-            var usuario = await _usuarioService.ObterPorId(Guid.Parse(idUsuario));
-            //var usersIdentity = _userManager.Users.;
+             var usuario = await _usuarioService.ObterPorId(Guid.Parse(idUsuario));
 
-
-
-
-
-
-            return View();
+            return View(usuario);
         }
 
 

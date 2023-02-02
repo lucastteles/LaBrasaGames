@@ -1,4 +1,4 @@
-﻿@model LaBrasa.MVC.ViewModels.UsuarioViewModel
+﻿@model Labrasa.Application.DTOs.UsuarioDTO
 
 <html>
 <head>
@@ -37,7 +37,7 @@
 
 
 
-        img.avatar {
+        img.rounded-circle {
             width: 200px;
             border-radius: 10%;
             filter: grayscale(1);
@@ -77,18 +77,21 @@
 <body>
     <div class="container">
         <h1> Perfil </h1>
-        <img class="avatar" src="~/Images/shutterstock_502222246-copiar-1.jpg" alt="Avatar">
+        <img class="rounded-circle" src="~/Images/icons8-usuário-64 (2).png"  alt="Avatar">
 
 
 
         <div class="detalhes-left">
             <h2>Informções Pessoais</h2>
-            <span class="negrito">Nome:</span> <font color="white"><p>@Html.DisplayFor(model => model.Nome)</p></font>
-            <span class="negrito">Idade:</span> <font color="white"><p>@Html.DisplayFor(model => model.Idade)</p></font>
-            <span class="negrito">Endereço:</span> <font color="white"><p>@Html.DisplayFor(model => model.Endereco)</p></font>
-            <span class="negrito">Genero:</span> <font color="white"><p>@Html.DisplayFor(model => model.Genero)</p></font>
-            <span class="negrito">Email:</span>  <font color="white"><p>@Html.DisplayFor(model => model.Email)</p></font>
-            <span class="negrito">Telefone:</span>  <font color="white"><p>@Html.DisplayFor(model => model.PhoneNumber)</p></font>
+            
+            <span class="negrito">Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </span> 
+            <br />
+            <span class="negrito">Idade: @Html.DisplayFor(model => model.Idade)</span> 
+            <br />
+            <span class="negrito">Endereço: @Html.DisplayFor(model => model.Endereco)</span>
+            <br />
+            <span class="negrito">Genero: @Html.DisplayFor(model => model.Genero)</span> 
+   
         </div>
     </div>
 
