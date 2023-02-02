@@ -3,6 +3,7 @@ using LaBrasa.Infra.Data.Identity;
 using LaBrasa.MVC.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -47,14 +48,13 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
                     Endereco = usuarioDto?.Endereco,
                     Genero = usuarioDto?.Genero.ToString(),
 
-                    
+
                 });
             }
 
             return View(usersVM);
         }
 
-
-
+        
     }
 }

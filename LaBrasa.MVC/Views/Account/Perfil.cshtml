@@ -1,4 +1,6 @@
-﻿<html>
+﻿@model LaBrasa.MVC.ViewModels.UsuarioViewModel
+
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Site do Prof. Miltin</title>
@@ -81,12 +83,12 @@
 
         <div class="detalhes-left">
             <h2>Informções Pessoais</h2>
-            <span class="negrito">Nome:</span> <font color="white"><p>Milton Santos</p></font>
-            <span class="negrito">Idade:</span> <font color="white"><p>34 anos</p></font>
-            <span class="negrito">Endereço:</span> <font color="white"><p>Santa Teresa - ES</p></font>
-            <span class="negrito">Genero:</span> <font color="white"><p>Masculino</p></font>
-            <span class="negrito">Email:</span>  <font color="white"><p>miltonsanots22yahoo.com.br</p></font>
-            <span class="negrito">Email:</span>  <font color="white"><p>miltonsanots22yahoo.com.br</p></font>
+            <span class="negrito">Nome:</span> <font color="white"><p>@Html.DisplayFor(model => model.Nome)</p></font>
+            <span class="negrito">Idade:</span> <font color="white"><p>@Html.DisplayFor(model => model.Idade)</p></font>
+            <span class="negrito">Endereço:</span> <font color="white"><p>@Html.DisplayFor(model => model.Endereco)</p></font>
+            <span class="negrito">Genero:</span> <font color="white"><p>@Html.DisplayFor(model => model.Genero)</p></font>
+            <span class="negrito">Email:</span>  <font color="white"><p>@Html.DisplayFor(model => model.Email)</p></font>
+            <span class="negrito">Telefone:</span>  <font color="white"><p>@Html.DisplayFor(model => model.PhoneNumber)</p></font>
         </div>
     </div>
 

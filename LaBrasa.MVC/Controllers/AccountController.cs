@@ -5,7 +5,10 @@ using LaBrasa.Infra.Data.Identity;
 using LaBrasa.MVC.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace LaBrasa.MVC.Controllers
@@ -42,10 +45,14 @@ namespace LaBrasa.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            var result = await _authenticate.Authenticate(model.Email, model.Password);
+            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, lockoutOnFailure: false);
 
-            if (result)
+            if (result.Succeeded)
             {
+                var user = await _userManager.FindByNameAsync(model.Email);
+
+                TempData["cliente"] = user.Id.ToString();
+
                 if (string.IsNullOrEmpty(model.ReturnUrl))
                 {
                     return RedirectToAction("Index", "Home");
@@ -102,16 +109,28 @@ namespace LaBrasa.MVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Perfil()
+        public async Task<IActionResult> Perfil()  //, LoginViewModel model)
         {
+            var idUsuario = TempData["cliente"].ToString();
+
+            var usuario = await _usuarioService.ObterPorId(Guid.Parse(idUsuario));
+            //var usersIdentity = _userManager.Users.;
+
+
+
+
+
+
             return View();
         }
+
 
         public async Task<IActionResult> Logout()
         {
             await _authenticate.Logout();
             return Redirect("/Account/Login");
         }
+
     }
 }
 
