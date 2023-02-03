@@ -26,13 +26,13 @@
             text-align: center;
         }
 
-        h1 {
-            color: #FF8F1B;
-        }
 
         h2 {
             color: #FF8F1B;
-            font-size: 14px;
+            font-size: 35px;
+            text-align: left;
+            padding: 30px;
+            margin: 30px;
         }
 
 
@@ -53,12 +53,18 @@
             column-count: 3;
         }
 
+        /*.detalhes-left > h2{
+                            color: #FF8F1B;
+                            font-size: 20px;
+                        }*/
+
+
         /*.detalhes-right {
-            margin: 30px;
-            -webkit-column-count: 3; /* Chrome, Safari, Opera */
-/*            -moz-column-count: 3;*/ /* Firefox */
-            /*column-count: 3;
-        }*//**/
+                            margin: 30px;
+                            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        /*            -moz-column-count: 3;*/ /* Firefox */
+        /*column-count: 3;
+                        }*/ /**/
 
         .negrito {
             font-weight: 700;
@@ -76,22 +82,21 @@
 
 <body>
     <div class="container">
-        <h1> Perfil </h1>
-        <img class="rounded-circle" src="~/Images/icons8-usuário-64 (2).png"  alt="Avatar">
+        <img class="rounded-circle" src="~/Images/icons8-usuário-64 (2).png" alt="Avatar">
 
 
-
+        <h2>Informações Pessoais</h2>
         <div class="detalhes-left">
-            <h2>Informções Pessoais</h2>
-            
-            <span class="negrito">Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </span> 
+            @*<h2>Informações Pessoais</h2>*@
+
+            <span class="negrito">Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </span>
             <br />
-            <span class="negrito">Idade: @Html.DisplayFor(model => model.Idade)</span> 
+            <span class="negrito">Idade: @Html.DisplayFor(model => model.Idade)</span>
             <br />
             <span class="negrito">Endereço: @Html.DisplayFor(model => model.Endereco)</span>
             <br />
-            <span class="negrito">Genero: @Html.DisplayFor(model => model.Genero)</span> 
-   
+            <span class="negrito">Genero: @Html.DisplayFor(model => model.Genero)</span>
+
         </div>
     </div>
 
