@@ -1,3 +1,4 @@
+using LaBrasa.Domain.Account;
 using LaBrasa.Infra.Ioc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,10 +27,13 @@ namespace LaBrasa.MVC
         {
             services.AddInfrastructure(Configuration);
             services.AddControllersWithViews();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app,
+            IWebHostEnvironment env, ISeedUserRoleInitial seedUserRoleInitial)
         {
             if (env.IsDevelopment())
             {
@@ -45,6 +49,12 @@ namespace LaBrasa.MVC
             app.UseStaticFiles();
 
             app.UseRouting();
+
+///////////////////////////////////////////////////////
+            //cria os perfis
+            seedUserRoleInitial.SeedRoles();
+            //cria os usuários e atribui ao pefil
+            seedUserRoleInitial.SeedRoles(); //SeedUsersRoles
 
             app.UseAuthorization();
 

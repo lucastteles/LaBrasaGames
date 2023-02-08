@@ -25,11 +25,11 @@ namespace LaBrasa.Infra.Data.Identity
             if (_userManager.FindByEmailAsync("usuario@localhost").Result == null)
             {
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = "usuario@localhost";
-                user.Email = "usuario@localhost";
+                user.UserName = "usuario@localhost.com.br";
+                user.Email = "usuario@localhost.com.br";
                 user.PhoneNumber = "21975518853";  //////////////////////
-                user.NormalizedUserName = "USUARIO@LOCALHOST";
-                user.NormalizedEmail = "USUARIO@LOCALHOST";
+                user.NormalizedUserName = "USUARIO@LOCALHOST.COM.BR";
+                user.NormalizedEmail = "USUARIO@LOCALHOST.COM.BR";
                 user.PhoneNumberConfirmed = true;  ////////////////////
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
@@ -43,14 +43,14 @@ namespace LaBrasa.Infra.Data.Identity
                 }
             }
 
-            if (_userManager.FindByEmailAsync("admin@localhost").Result == null)
+            if (_userManager.FindByEmailAsync("admin@local").Result == null)
             { 
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = "admin@localhost";
-                user.Email = "admin@localhost";
+                user.UserName = "admin@local";
+                user.Email = "admin@local.com.br";
                 user.PhoneNumber = "21975518853";  /////////////////////
-                user.NormalizedUserName = "ADMIN@LOCALHOST";
-                user.NormalizedEmail = "ADMIN@LOCALHOST";
+                user.NormalizedUserName = "ADMIN@LOCAL.COM.BR";
+                user.NormalizedEmail = "ADMIN@LOCAL.COM.BR";
                 user.PhoneNumberConfirmed = true;  /////////////////////
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LaBrasa.MVC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-   @* <link rel="stylesheet" href="~/css/site.css" />*@
+    @* <link rel="stylesheet" href="~/css/site.css" />*@
     <link rel="stylesheet" href="~/css/style.css">
 </head>
 
@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        
+
 
         <!-- menu retrátil lateral esquerda -->
         <input type="checkbox" id="check">
@@ -36,9 +36,15 @@
                 <a href="#">
                     <div class="Link">Sobre</div>
                 </a>
-                
-                    <a asp-controller="Account" asp-action="Logout">
-                    <div class="Link"> Sair<img src="~/Images/icons8-login-100 (1).png"  height="25" width="25" /> </div>
+                @if (User.IsInRole("Admin"))@*Verificar se o Usuário tem o perfil de Admin @**@
+                {
+                    <a href="/admin/adminAccount">
+                        <div class="Link">Admin</div>
+                    </a>
+                }
+
+                <a asp-controller="Account" asp-action="Logout">
+                    <div class="Link"> Sair<img src="~/Images/icons8-login-100 (1).png" height="25" width="25" /> </div>
                 </a>
             </nav>
         </div>
