@@ -301,6 +301,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -392,51 +393,102 @@ body {
 }
 
 
-/*LOGIN SMARTPHONE*/
-@media only screen and (max-width: 950px) {
-    .card-login {
-        width: 85%;
+/*JOGOS INDEX*/
+/*
+.card mb-4 {
+    background-color: transparent;
+}*/
+
+
+
+
+
+/*.container-jogos {
+}
+
+.card mb-4 {
+}*/
+
+/*JOGO INDEX SMARTPHONE*/
+
+
+/*@media only screen and (max-width: 950px) {
+    .card {
+        background-color: transparent;
     }
 }
 
 
-
 @media only screen and (max-width: 600px) {
-    .main-login {
-        flex-direction: column;
+
+    .card {
+        background-color: transparent;
     }
 
-    .left-login > h1 {
-        display: none
-    }
-
-    .left-login {
-        width: 50%;
-        height: auto;
-    }
-
-    .right-login {
-        width: 130%;
-        height: auto;
-    }
-
-    .left-login-image {
-        width: 50vw;
-    }
-
-    .card-login {
-        width: 90%;
-    }
-
-    .container {
+    .container-jogo {
         width: 80%;
     }
+}*/
+
+
+/*PERFIL*/
+
+
+
+body-perfil {
+    background-color: #fff;
+    text-align: center;
+    margin: 25px;
 }
 
-/*LOGIN SMARTPHONE*/
+.container-perfil {
+    background-color: #1C1C1C;
+    padding: 15px;
+    text-align: center;
+}
+
+
+h2 {
+    color: #FF8F1B;
+    font-size: 35px;
+    text-align: left;
+    padding: 30px;
+    margin: 30px;
+}
+
+
+
+img.rounded-circle {
+    width: 200px;
+    border-radius: 10%;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.detalhes-left {
+    padding: 30px;
+    margin: 30px;
+    text-align: left;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+.negrito {
+    font-weight: 700;
+    color: white;
+}
+
+    .negrito > p {
+        color: white;
+        font-weight: 400;
+    }
+
+
+/*PERFIL SMARTPHONE*/
 
 @media only screen and (max-width: 950px) {
-    .card-login {
+    .container-perfil {
         width: 85%;
     }
 }
@@ -444,72 +496,117 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-    .main-login {
-        flex-direction: column;
-    }
-
-    .left-login > h1 {
-        display: none
-    }
-
-    .left-login {
-        width: 50%;
+    .container-perfil {
+        width: 120%;
         height: auto;
     }
 
-    .right-login {
-        width: 130%;
-        height: auto;
+    h2 {
+        font-size: 30px;
+        text-align: left;
+        padding: 30px;
+        margin: 30px;
     }
 
-    .left-login-image {
-        width: 50vw;
+    img.rounded-circle {
+        width: 105px;
     }
 
-    .card-login {
-        width: 90%;
+    .detalhes-left {
+        padding: 30px;
+        margin: auto;
+        text-align: initial;
+        -webkit-column-count: auto; /* Chrome, Safari, Opera */
+        -moz-column-count: auto; /* Firefox */
+        column-count: auto;
     }
 
-    .container {
-        width: 80%;
+    .negrito {
+        font-weight: 50;
+        color: white;
     }
 }
 
 
+        /*LOGIN SMARTPHONE*/
 
-/*REGISTER SMARTPHONE*/
-
-@media only screen and (max-width: 950px) {
-    .card-register {
-        width: 85%;
-    }
-}
-
+        @media only screen and (max-width: 950px) {
+            .card-login {
+                width: 85%;
+            }
+        }
 
 
-@media only screen and (max-width: 600px) {
-    
+
+        @media only screen and (max-width: 600px) {
+            .main-login {
+                flex-direction: column;
+            }
+
+            .left-login > h1 {
+                display: none
+            }
+
+            .left-login {
+                width: 50%;
+                height: auto;
+            }
+
+            .right-login {
+                width: 130%;
+                height: auto;
+            }
+
+            .left-login-image {
+                width: 50vw;
+            }
+
+            .card-login {
+                width: 90%;
+            }
+
+            .container {
+                width: 80%;
+            }
+        }
 
 
-    .left-register {
-        width: 140%;
-        height: auto;
-    }
 
-    .right-register {
-        width: 130%;
-        height: auto;
-    }
 
-    .left-register-image {
-        width: 50vw;
-    }
 
-    .card-register {
-        width: 90%;
-    }
+        /*REGISTER SMARTPHONE*/
 
-    .container {
-        width: 70%;
-    }
-}
+        @media only screen and (max-width: 950px) {
+            .card-register {
+                width: 85%;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 600px) {
+
+
+
+            .left-register {
+                width: 140%;
+                height: auto;
+            }
+
+            .right-register {
+                width: 130%;
+                height: auto;
+            }
+
+            .left-register-image {
+                width: 50vw;
+            }
+
+            .card-register {
+                width: 90%;
+            }
+
+            .container {
+                width: 70%;
+            }
+        }
