@@ -15,20 +15,20 @@
 <body-perfil>
     <div class="container-perfil">
         <img class="rounded-circle" src="~/Images/icons8-usuário-64 (2).png" alt="Avatar">
+        <font color="#FF8F1B"><h1> @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </h1></font>
 
-
-        <h2>Informações Pessoais</h2>
+        
         <div class="detalhes-left">
             @*<h2>Informações Pessoais</h2>*@
 
-            <span class="negrito">Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </span>
+            @*<span class="negrito">Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </span>*@
             <br />
             <span class="negrito">Idade: @Html.DisplayFor(model => model.Idade)</span>
             <br />
+            <span class="negrito">Genero: @Html.DisplayFor(model => model.Genero)</span>
+            <br />
             <span class="negrito">Endereço: @Html.DisplayFor(model => model.Endereco)</span>
             <br />
-            <span class="negrito">Genero: @Html.DisplayFor(model => model.Genero)</span>
-
         </div>
     </div>
 

@@ -1,8 +1,12 @@
 using LaBrasa.Domain.Account;
+using LaBrasa.Infra.Data.Identity;
 using LaBrasa.Infra.Ioc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,10 +30,38 @@ namespace LaBrasa.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddInfrastructure(Configuration);
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews();
 
-            
+            //services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("Admin",
+            //        politica =>
+            //        {
+            //            politica.RequireRole("Admin");
+            //        });
+            //});
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();//vai valer por todo o tempo de vida da Aplicação (as informações vão permanecer)
+
+            services.AddControllersWithViews(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                       .RequireAuthenticatedUser()
+                       .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            }); 
+
+           
+           
+
+            ///////////////////////////
+            ///
+           
+            services.AddMemoryCache(); //Registrando os middes (Onde São Armazenados os Dados)
+            services.AddSession();//Recurso para Salvar e Armazenar dados do Usuário
         }
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app,
@@ -46,16 +78,20 @@ namespace LaBrasa.MVC
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
 
+            app.UseStaticFiles();
             app.UseRouting();
 
-///////////////////////////////////////////////////////
+
             //cria os perfis
             seedUserRoleInitial.SeedRoles();
             //cria os usuários e atribui ao pefil
-            seedUserRoleInitial.SeedRoles(); //SeedUsersRoles
+            seedUserRoleInitial.SeedUsers(); //SeedUsersRoles
 
+
+            ////////////////////////////////
+            app.UseSession();
+            app.UseAuthentication();//Sempre Antes da Autorização ///////////////////////////////////////////////
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -69,11 +105,6 @@ namespace LaBrasa.MVC
                     name: "default",
                     pattern: "{controller=Account}/{action=Login}/{id?}");
 
-
-
-                //endpoints.MapControllerRoute( //area Admin
-                //name: "areas",
-                //pattern: "{area:exists}/{controller=AdminAccount}/{action=Index}/{id?}");
 
             });
         }

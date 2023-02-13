@@ -21,7 +21,7 @@ namespace LaBrasa.Infra.Ioc
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services,
-           IConfiguration configuration)
+           IConfiguration configuration) 
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
@@ -36,6 +36,7 @@ namespace LaBrasa.Infra.Ioc
 
             services.AddScoped<IAuthenticate, AuthenticateService>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
 
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IUsuarioService, UsuarioService>();

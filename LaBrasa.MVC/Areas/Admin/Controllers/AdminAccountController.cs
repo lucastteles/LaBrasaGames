@@ -1,6 +1,7 @@
 ﻿using Labrasa.Application.Interfaces;
 using LaBrasa.Infra.Data.Identity;
 using LaBrasa.MVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminAccountController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
@@ -27,6 +29,7 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Usuario()
         {
+
             var usersIdentity = userManager.Users.ToList();
 
             var usuarios = await _usuarioService.ObterUsuario();

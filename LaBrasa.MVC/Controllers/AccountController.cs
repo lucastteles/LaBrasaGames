@@ -3,6 +3,7 @@ using Labrasa.Application.Interfaces;
 using LaBrasa.Domain.Account;
 using LaBrasa.Infra.Data.Identity;
 using LaBrasa.MVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +35,7 @@ namespace LaBrasa.MVC.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Login(string returnUrl)
         {
             return View(new LoginViewModel()
@@ -43,6 +45,7 @@ namespace LaBrasa.MVC.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, lockoutOnFailure: false);
@@ -71,7 +74,7 @@ namespace LaBrasa.MVC.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -109,7 +112,7 @@ namespace LaBrasa.MVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Perfil()  //, LoginViewModel model)
+        public async Task<IActionResult> Perfil()  
         {
             var idUsuario = TempData["cliente"].ToString();
 

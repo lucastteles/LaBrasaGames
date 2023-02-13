@@ -20,16 +20,16 @@ namespace LaBrasa.Infra.Data.Identity
             _userManager = userManager;
         }
 
-        public void SeedUsers()
+        public async void SeedUsers()
         {
-            if (_userManager.FindByEmailAsync("usuario@localhost").Result == null)
+            if (_userManager.FindByEmailAsync("usuario@gmail").Result == null)
             {
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = "usuario@localhost.com.br";
-                user.Email = "usuario@localhost.com.br";
-                user.PhoneNumber = "21975518853";  //////////////////////
-                user.NormalizedUserName = "USUARIO@LOCALHOST.COM.BR";
-                user.NormalizedEmail = "USUARIO@LOCALHOST.COM.BR";
+                user.UserName = "usuario@gmail.com";
+                user.Email = "usuario@gmail.com";
+                user.PhoneNumber = "21975518858";  //////////////////////
+                user.NormalizedUserName = "USUARIO@GMAIL.COM";
+                user.NormalizedEmail = "USUARIO@GMAIL.COM";
                 user.PhoneNumberConfirmed = true;  ////////////////////
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
@@ -39,17 +39,17 @@ namespace LaBrasa.Infra.Data.Identity
 
                 if (result.Succeeded)
                 {
-                    _userManager.AddToRoleAsync(user, "User").Wait();
+                    await _userManager.AddToRoleAsync(user, "User");
                 }
             }
 
             if (_userManager.FindByEmailAsync("admin@local").Result == null)
             { 
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = "admin@local";
+                user.UserName = "admin@local.com.br";
                 user.Email = "admin@local.com.br";
                 user.PhoneNumber = "21975518853";  /////////////////////
-                user.NormalizedUserName = "ADMIN@LOCAL.COM.BR";
+                user.NormalizedUserName = "admin@local.com.br";
                 user.NormalizedEmail = "ADMIN@LOCAL.COM.BR";
                 user.PhoneNumberConfirmed = true;  /////////////////////
                 user.EmailConfirmed = true;
@@ -60,7 +60,7 @@ namespace LaBrasa.Infra.Data.Identity
 
                 if (result.Succeeded)
                 {
-                    _userManager.AddToRoleAsync(user, "Admin").Wait();
+                   await _userManager.AddToRoleAsync(user, "Admin");
                 }
             }
 

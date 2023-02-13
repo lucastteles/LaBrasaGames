@@ -298,7 +298,7 @@ body {
 
 .main-register {
     width: 60vw;
-    height: 120vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -462,13 +462,7 @@ body-perfil {
 }
 
 
-h2 {
-    color: #FF8F1B;
-    font-size: 35px;
-    text-align: left;
-    padding: 30px;
-    margin: 30px;
-}
+
 
 
 
@@ -477,6 +471,11 @@ img.rounded-circle {
     border-radius: 10%;
     filter: grayscale(1);
     transition: 0.5s;
+}
+
+.h1 {
+    align-items: center;
+    color: #FF8F1B;
 }
 
 .detalhes-left {
