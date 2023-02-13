@@ -58,7 +58,12 @@ namespace LaBrasa.MVC
             ///
            
             services.AddMemoryCache(); //Registrando os middes (Onde São Armazenados os Dados)
-            services.AddSession();//Recurso para Salvar e Armazenar dados do Usuário
+            services.AddSession(options => //Recurso para Salvar e Armazenar dados do Usuário
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
 

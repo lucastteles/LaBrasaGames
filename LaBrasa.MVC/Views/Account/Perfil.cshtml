@@ -1,39 +1,38 @@
 ﻿@model Labrasa.Application.DTOs.UsuarioDTO
-@*
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Site do Prof. Miltin</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&amp;display=swap" rel="stylesheet">
-    <style type="text/css" title="MeuEstilo" media="all"></style>
 
-</head>*@
+<div class="container-perfil mt-5">
+    <img class="rounded-circle" src="~/Images/icons8-usuário-64 (2).png" alt="Avatar">
 
-<body-perfil>
-    <div class="container-perfil">
-        <img class="rounded-circle" src="~/Images/icons8-usuário-64 (2).png" alt="Avatar">
-        <font color="#FF8F1B"><h1> @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </h1></font>
-
-        
-        <div class="detalhes-left">
-            @*<h2>Informações Pessoais</h2>*@
-
-            @*<span class="negrito">Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome) </span>*@
-            <br />
-            <span class="negrito">Idade: @Html.DisplayFor(model => model.Idade)</span>
-            <br />
-            <span class="negrito">Genero: @Html.DisplayFor(model => model.Genero)</span>
-            <br />
-            <span class="negrito">Endereço: @Html.DisplayFor(model => model.Endereco)</span>
-            <br />
-        </div>
+    <div class="row negrito mb-4" class="row" style="justify-content: center;">
+        <h2>Informações Pessoais</h2>
     </div>
 
+    <div style="justify-content: center;">
+        <div class="row">
+            <span class="negrito col-md-12">
+                Nome: @Html.DisplayFor(model => model.Nome) @Html.DisplayFor(model => model.Sobrenome)
+            </span>
+        </div>
 
-    <!--Experimente por um filtro para deixar a imagem preto
-    e branca filter: grayscale(1); -->
+        <div class="row">
+            <span class="negrito col-md-12">
+                Idade: @Html.DisplayFor(model => model.Idade)
+            </span>
+        </div>
 
-</body-perfil>
+        <div class="row">
+            <span class="negrito col-md-12">
+                Genero: @Html.DisplayFor(model => model.Genero)
+            </span>
+        </div>
+
+        <div class="row">
+            <span class="negrito col-md-12">
+                Endereço: @Html.DisplayFor(model => model.Endereco)
+            </span>
+        </div>
+
+    </div>
+</div>
+

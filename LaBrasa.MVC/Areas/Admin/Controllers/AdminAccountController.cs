@@ -50,8 +50,6 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
                     Sobrenome = usuarioDto?.Sobrenome,
                     Endereco = usuarioDto?.Endereco,
                     Genero = usuarioDto?.Genero.ToString(),
-
-
                 });
             }
 

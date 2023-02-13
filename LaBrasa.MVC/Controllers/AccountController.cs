@@ -4,6 +4,7 @@ using LaBrasa.Domain.Account;
 using LaBrasa.Infra.Data.Identity;
 using LaBrasa.MVC.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -54,7 +55,7 @@ namespace LaBrasa.MVC.Controllers
             {
                 var user = await _userManager.FindByNameAsync(model.Email);
 
-                TempData["cliente"] = user.Id.ToString();
+                HttpContext.Session.SetString("cliente", user.Id.ToString());
 
                 if (string.IsNullOrEmpty(model.ReturnUrl))
                 {
@@ -70,12 +71,14 @@ namespace LaBrasa.MVC.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
         
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             var applicationUser = new ApplicationUser
@@ -114,9 +117,9 @@ namespace LaBrasa.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Perfil()  
         {
-            var idUsuario = TempData["cliente"].ToString();
+            var idUsuario = HttpContext.Session.GetString("cliente");
 
-             var usuario = await _usuarioService.ObterPorId(Guid.Parse(idUsuario));
+            var usuario = await _usuarioService.ObterPorId(Guid.Parse(idUsuario));
 
             return View(usuario);
         }

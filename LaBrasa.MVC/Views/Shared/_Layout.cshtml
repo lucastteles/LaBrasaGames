@@ -39,12 +39,13 @@
                 <a href="#">
                     <div class="Link">Contato</div>
                 </a>
-              @* @if (User.IsInRole("Admin"))@*Verificar se o Usuário tem o perfil de Admin @**@
-                    @*{*@
+                @if (User.IsInRole("Admin"))@*Verificar se o Usuário tem o perfil de Admin @**@
+                {
                     <a href="/admin/adminAccount">
                         <div class="Link">Admin</div>
                     </a>
-                    
+                }
+
 
                 <a asp-controller="Account" asp-action="Logout">
                     <div class="Link"> Sair<img src="~/Images/icons8-login-100 (1).png" height="25" width="25" /> </div>
