@@ -302,7 +302,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -396,7 +395,7 @@ body {
 
 /*JOGOS INDEX*/
 
-.card{
+.card {
     background-color: transparent;
 }
 
@@ -434,14 +433,12 @@ body {
         box-shadow: 0px 3px #FF8F1B;
     }
 
-    .col-md-4{
-
+    .col-md-4 {
     }
 
     .container-jogos {
         width: 80%;
     }
-
 }
 
 
@@ -498,8 +495,46 @@ img.rounded-circle {
     }
 
 
-/*PERFIL SMARTPHONE*/
 
+/*Usuario*/
+
+.conteudo:hover {
+    background-color: #076992;
+}
+
+.table {
+    color: white;
+}
+
+.table thead {
+    display: table-header-group;
+    font-weight: 500;
+}
+
+.table tbody tr td:before{
+    display:none;
+}
+
+.table thead th {
+    padding: 10px;
+}
+
+.table tbody tr td {
+    display: table-cell;
+    font-weight: 400;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.table tbody tr {
+    border: none;
+    display: table-row;
+}
+
+
+
+/*PERFIL SMARTPHONE*/
 @media only screen and (max-width: 950px) {
     .container-perfil {
         width: 85%;
@@ -544,85 +579,127 @@ img.rounded-circle {
     }
 
 
-        /*LOGIN SMARTPHONE*/
+    /*LOGIN SMARTPHONE*/
 
-        @media only screen and (max-width: 950px) {
-            .card-login {
-                width: 85%;
-            }
+    @media only screen and (max-width: 950px) {
+        .card-login {
+            width: 85%;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+        .main-login {
+            flex-direction: column;
         }
 
-
-
-        @media only screen and (max-width: 600px) {
-            .main-login {
-                flex-direction: column;
-            }
-
-            .left-login > h1 {
-                display: none
-            }
-
-            .left-login {
-                width: 50%;
-                height: auto;
-            }
-
-            .right-login {
-                width: 130%;
-                height: auto;
-            }
-
-            .left-login-image {
-                width: 50vw;
-            }
-
-            .card-login {
-                width: 90%;
-            }
-
-            .container {
-                width: 80%;
-            }
+        .left-login > h1 {
+            display: none
         }
 
-
-
-
-
-        /*REGISTER SMARTPHONE*/
-
-        @media only screen and (max-width: 950px) {
-            .card-register {
-                width: 85%;
-            }
+        .left-login {
+            width: 50%;
+            height: auto;
         }
 
-
-
-        @media only screen and (max-width: 600px) {
-
-
-
-            .left-register {
-                width: 140%;
-                height: auto;
-            }
-
-            .right-register {
-                width: 130%;
-                height: auto;
-            }
-
-            .left-register-image {
-                width: 50vw;
-            }
-
-            .card-register {
-                width: 90%;
-            }
-
-            .container {
-                width: 70%;
-            }
+        .right-login {
+            width: 130%;
+            height: auto;
         }
+
+        .left-login-image {
+            width: 50vw;
+        }
+
+        .card-login {
+            width: 90%;
+        }
+
+        .container {
+            width: 80%;
+        }
+    }
+
+
+
+
+
+    /*REGISTER SMARTPHONE*/
+
+    @media only screen and (max-width: 950px) {
+        .card-register {
+            width: 85%;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+
+
+
+        .left-register {
+            width: 140%;
+            height: auto;
+        }
+
+        .right-register {
+            width: 130%;
+            height: auto;
+        }
+
+        .left-register-image {
+            width: 50vw;
+        }
+
+        .card-register {
+            width: 90%;
+        }
+
+        .container {
+            width: 70%;
+        }
+    }
+
+
+    /*Usuario Smartphone*/
+
+    @media only screen and (max-width: 950px) {
+        .table {
+            width: 85%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .table tbody tr td {
+            display: block;
+            text-align: right;
+            border: none;
+        }
+
+            .table tbody tr td:before {
+                content: attr(data-title);
+                position: absolute;
+                left: 15px;
+                display: block;
+                font-weight: 600;
+                font-size: 1em;
+            }
+
+
+        .table thead {
+            display: none;
+        }
+
+        .table tbody tr {
+            margin: 10px;
+            display: block;
+            border: 1px solid #dad6eb;
+        }
+
+        .conteudo {
+            border: none;
+        }
+    }
+}

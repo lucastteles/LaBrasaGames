@@ -3,21 +3,15 @@
     @*@{
     ViewData["Title"] = "Usuarios";
     }*@
-    <style>
-        .table{
-            color:white;
-        }
-    </style>
-
+   
+<body>
 <table class="table mt-5">
     <thead>
         <tr>
             <th>
                 Nome
             </th>
-            <th>
-                Sobrenome
-            </th>
+           
             <th>
                 Endereco
             </th>
@@ -43,29 +37,28 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
+            <tr class="conteudo">
+                <td data-title="Nome">
+                    @Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Sobrenome)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sobrenome)
-                </td>
-                <td>
+                
+                <td data-title="Endereco">
                     @Html.DisplayFor(modelItem => item.Endereco)
                 </td>
-                <td>
+                <td data-title="Idade">
                     @Html.DisplayFor(modelItem => item.Idade)
                 </td>
-                <td>
+                <td data-title="Genero">
                     @Html.DisplayFor(modelItem => item.Genero)
                 </td>
-                <td>
+                <td data-title="Email">
                     @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
+                </td >
+                <td data-title="Telefone">
                     @Html.DisplayFor(modelItem => item.PhoneNumber)
                 </td>
             </tr>
         }
     </tbody>
 </table>
+</body>
