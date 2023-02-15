@@ -484,12 +484,12 @@ img.rounded-circle {
     column-count: 3;
 }
 
-.negrito {
+negrito {
     font-weight: 700;
     color: white;
 }
 
-    .negrito > p {
+    negrito > p {
         color: white;
         font-weight: 400;
     }
@@ -582,7 +582,7 @@ table {
 
 @media only screen and (max-width: 600px) {
     .container-perfil {
-        width: 120%;
+        width: 130%;
         height: 85vh;
         padding: 30px 35px;
         border-radius: 25px;
@@ -610,9 +610,15 @@ table {
     }
 
     .negrito {
+        margin: 2px;
         font-weight: 50;
         color: #eeebeb;
         text-align: left;
+    }
+
+    negrito {
+        font-weight: 700;
+        color: white;
     }
 
 
@@ -651,6 +657,10 @@ table {
 
         .card-login {
             width: 90%;
+        }
+
+        .btn-login {
+            margin: 15px;
         }
 
         .container {
@@ -710,7 +720,7 @@ table {
 
     @media only screen and (max-width: 600px) {
 
-        .container {
+        .container-usuario {
             padding: 15px;
             margin: 0px;
         }
