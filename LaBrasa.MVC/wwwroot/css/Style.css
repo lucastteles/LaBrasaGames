@@ -502,35 +502,74 @@ img.rounded-circle {
     background-color: #076992;
 }
 
-.table {
+body{
+    padding:30px;
+}
+
+table {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    align-items: center;
     color: white;
 }
 
-.table thead {
-    display: table-header-group;
-    font-weight: 500;
-}
+    table thead th {
+        padding: 10px;
+        font-weight: 600;
+    }
 
-.table tbody tr td:before{
-    display:none;
-}
+    table tbody tr td {
+        display: table-cell;
+        font-weight: 400;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+    }
 
-.table thead th {
-    padding: 10px;
-}
+    table tbody tr {
+        border: none;
+        display: table-row;
+    }
 
-.table tbody tr td {
-    display: table-cell;
-    font-weight: 400;
-    padding: 10px;
-    text-align: left;
-    position: relative;
-}
+        table tbody tr:nth-child(add){
+            background:#f2f2f2;
+        }
 
-.table tbody tr {
-    border: none;
-    display: table-row;
-}
+        table tbody tr td button{
+            display:inline-block;
+            padding: 10px 15px;
+            position:initial;
+            transform: translate(0);
+            width: auto;
+        }
+
+        table tbody tr td button{
+            background: #4caf50;
+            border:none;
+            border-radius:20px;
+            box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
+            color:#fff;
+            font-weight:700;
+            padding:10px 0;
+            width:50%;
+        }
+
+        table thead {
+            display: table-header-group;
+            font-weight: 500;
+        }
+
+        table tbody tr td:before {
+            display: none;
+        }
+
+        table tbody tr td button:hover, table tbody tr td button:focus{
+            background:#a795fe;
+            cursor:pointer;
+        }
+
 
 
 
@@ -666,19 +705,19 @@ img.rounded-circle {
     /*Usuario Smartphone*/
 
     @media only screen and (max-width: 950px) {
-        .table {
+        table {
             width: 85%;
         }
     }
 
     @media only screen and (max-width: 600px) {
-        .table tbody tr td {
+        table tbody tr td {
             display: block;
             text-align: right;
             border: none;
         }
 
-            .table tbody tr td:before {
+            table tbody tr td:before {
                 content: attr(data-title);
                 position: absolute;
                 left: 15px;
@@ -688,14 +727,18 @@ img.rounded-circle {
             }
 
 
-        .table thead {
+        table thead {
             display: none;
         }
 
-        .table tbody tr {
+        table tbody tr {
             margin: 10px;
             display: block;
             border: 1px solid #dad6eb;
+        }
+
+        table tbody tr td button{
+            width:100%;
         }
 
         .conteudo {
