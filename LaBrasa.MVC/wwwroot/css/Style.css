@@ -533,9 +533,7 @@ table {
         display: table-row;
     }
 
-        table tbody tr:nth-child(add){
-            background:#f2f2f2;
-        }
+        
 
         table tbody tr td button{
             display:inline-block;
@@ -546,14 +544,14 @@ table {
         }
 
         table tbody tr td button{
-            background: #4caf50;
+            background:#FF8F1B;
             border:none;
             border-radius:20px;
             box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
             color:#fff;
             font-weight:700;
             padding:10px 0;
-            width:50%;
+            width:100%;
         }
 
         table thead {
@@ -711,6 +709,16 @@ table {
     }
 
     @media only screen and (max-width: 600px) {
+
+        .container {
+            padding: 15px;
+            margin: 0px;
+        }
+            table {
+            border: none;
+            width: 400px;
+        }
+
         table tbody tr td {
             display: block;
             text-align: right;
@@ -731,18 +739,18 @@ table {
             display: none;
         }
 
-        table tbody tr {
-            margin: 10px;
-            display: block;
-            border: 1px solid #dad6eb;
-        }
+            table tbody tr {
+                margin: 10px;
+                display: block;
+                border: 1px solid #dad6eb;
+                border-radius: 12px;
+                padding: 2px 1px;
+            }
 
         table tbody tr td button{
             width:100%;
         }
 
-        .conteudo {
-            border: none;
-        }
+        
     }
 }
