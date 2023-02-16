@@ -570,62 +570,42 @@ table {
 
 
 
+/*CONTATO*/
 
-/*PERFIL SMARTPHONE*/
-@media only screen and (max-width: 950px) {
-    .container-perfil {
-        width: 85%;
-    }
+
+.main-contato {
+   
+    color:#fff;
+}
+
+.card-contato {
+    display: flex;
+    padding: 30px 35px;
+    align-items: center;
+    background: #1C1C1C;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #5b5b58;
+}
+
+.contato-image {
+    width: 50%;
+}
+
+/*deu certo assim*/
+/*img{
+    width:50%;
+}*/
+
+
+
+.left-contato {
+    margin-left:20px;
 }
 
 
-
-@media only screen and (max-width: 600px) {
-    .container-perfil {
-        width: 130%;
-        height: 85vh;
-        padding: 30px 35px;
-        border-radius: 25px;
-        box-shadow: 0px 2px 3px #FF8F1B;
-    }
-
-    h2 {
-        font-size: 30px;
-        text-align: left;
-        padding: 30px;
-        margin: 30px;
-    }
-
-    img.rounded-circle {
-        width: 105px;
-    }
-
-    .detalhes-left {
-        padding: 30px;
-        margin: auto;
-        text-align: initial;
-        -webkit-column-count: auto; /* Chrome, Safari, Opera */
-        -moz-column-count: auto; /* Firefox */
-        column-count: auto;
-    }
-
-    .negrito {
-        margin: 2px;
-        font-weight: 50;
-        color: #eeebeb;
-        text-align: left;
-    }
-
-    negrito {
-        font-weight: 700;
-        color: white;
-    }
-
-
-    /*LOGIN SMARTPHONE*/
-
+    /*PERFIL SMARTPHONE*/
     @media only screen and (max-width: 950px) {
-        .card-login {
+        .container-perfil {
             width: 85%;
         }
     }
@@ -633,134 +613,185 @@ table {
 
 
     @media only screen and (max-width: 600px) {
-        .main-login {
-            flex-direction: column;
-        }
-
-        .left-login > h1 {
-            display: none
-        }
-
-        .left-login {
-            width: 50%;
-            height: auto;
-        }
-
-        .right-login {
+        .container-perfil {
             width: 130%;
-            height: auto;
+            height: 85vh;
+            padding: 30px 35px;
+            border-radius: 25px;
+            box-shadow: 0px 2px 3px #FF8F1B;
         }
 
-        .left-login-image {
-            width: 50vw;
+        h2 {
+            font-size: 30px;
+            text-align: left;
+            padding: 30px;
+            margin: 30px;
         }
 
-        .card-login {
-            width: 90%;
+        img.rounded-circle {
+            width: 105px;
         }
 
-        .btn-login {
-            margin: 15px;
+        .detalhes-left {
+            padding: 30px;
+            margin: auto;
+            text-align: initial;
+            -webkit-column-count: auto; /* Chrome, Safari, Opera */
+            -moz-column-count: auto; /* Firefox */
+            column-count: auto;
         }
 
-        .container {
-            width: 80%;
-        }
-    }
-
-
-
-
-
-    /*REGISTER SMARTPHONE*/
-
-    @media only screen and (max-width: 950px) {
-        .card-register {
-            width: 85%;
-        }
-    }
-
-
-
-    @media only screen and (max-width: 600px) {
-
-
-
-        .left-register {
-            width: 140%;
-            height: auto;
+        .negrito {
+            margin: 2px;
+            font-weight: 50;
+            color: #eeebeb;
+            text-align: left;
         }
 
-        .right-register {
-            width: 130%;
-            height: auto;
+        negrito {
+            font-weight: 700;
+            color: white;
         }
 
-        .left-register-image {
-            width: 50vw;
+
+        /*LOGIN SMARTPHONE*/
+
+        @media only screen and (max-width: 950px) {
+            .card-login {
+                width: 85%;
+            }
         }
 
-        .card-register {
-            width: 90%;
+
+
+        @media only screen and (max-width: 600px) {
+            .main-login {
+                flex-direction: column;
+            }
+
+            .left-login > h1 {
+                display: none
+            }
+
+            .left-login {
+                width: 50%;
+                height: auto;
+            }
+
+            .right-login {
+                width: 130%;
+                height: auto;
+            }
+
+            .left-login-image {
+                width: 50vw;
+            }
+
+            .card-login {
+                width: 90%;
+            }
+
+            .btn-login {
+                margin: 15px;
+            }
+
+            .container {
+                width: 80%;
+            }
         }
 
-        .container {
-            width: 70%;
+
+
+
+
+        /*REGISTER SMARTPHONE*/
+
+        @media only screen and (max-width: 950px) {
+            .card-register {
+                width: 85%;
+            }
         }
-    }
 
 
-    /*Usuario Smartphone*/
 
-    @media only screen and (max-width: 950px) {
-        table {
-            width: 85%;
+        @media only screen and (max-width: 600px) {
+
+
+
+            .left-register {
+                width: 140%;
+                height: auto;
+            }
+
+            .right-register {
+                width: 130%;
+                height: auto;
+            }
+
+            .left-register-image {
+                width: 50vw;
+            }
+
+            .card-register {
+                width: 90%;
+            }
+
+            .container {
+                width: 70%;
+            }
         }
-    }
 
-    @media only screen and (max-width: 600px) {
 
-        .container-usuario {
-            padding: 15px;
-            margin: 0px;
-        }
+        /*Usuario Smartphone*/
+
+        @media only screen and (max-width: 950px) {
             table {
-            border: none;
-            width: 400px;
+                width: 85%;
+            }
         }
 
-        table tbody tr td {
-            display: block;
-            text-align: right;
-            border: none;
-        }
+        @media only screen and (max-width: 600px) {
 
-            table tbody tr td:before {
-                content: attr(data-title);
-                position: absolute;
-                left: 15px;
-                display: block;
-                font-weight: 600;
-                font-size: 1em;
+            .container-usuario {
+                padding: 15px;
+                margin: 0px;
             }
 
-
-        table thead {
-            display: none;
-        }
-
-            table tbody tr {
-                margin: 10px;
-                display: block;
-                border: 1px solid #dad6eb;
-                border-radius: 12px;
-                padding: 2px 1px;
+            table {
+                border: none;
+                width: 400px;
             }
 
-        table tbody tr td button{
-            width:100%;
-        }
+                table tbody tr td {
+                    display: block;
+                    text-align: right;
+                    border: none;
+                }
 
-        
+                    table tbody tr td:before {
+                        content: attr(data-title);
+                        position: absolute;
+                        left: 15px;
+                        display: block;
+                        font-weight: 600;
+                        font-size: 1em;
+                    }
+
+
+                table thead {
+                    display: none;
+                }
+
+                table tbody tr {
+                    margin: 10px;
+                    display: block;
+                    border: 1px solid #dad6eb;
+                    border-radius: 12px;
+                    padding: 2px 1px;
+                }
+
+                    table tbody tr td button {
+                        width: 100%;
+                    }
+        }
     }
-}
