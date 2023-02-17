@@ -612,186 +612,213 @@ table {
 
 
 
-    @media only screen and (max-width: 600px) {
-        .container-perfil {
-            width: 130%;
-            height: 85vh;
-            padding: 30px 35px;
-            border-radius: 25px;
-            box-shadow: 0px 2px 3px #FF8F1B;
-        }
+@media only screen and (max-width: 600px) {
+    .container-perfil {
+        width: 130%;
+        height: 85vh;
+        padding: 30px 35px;
+        border-radius: 25px;
+        box-shadow: 0px 2px 3px #FF8F1B;
+    }
 
-        h2 {
-            font-size: 30px;
-            text-align: left;
-            padding: 30px;
-            margin: 30px;
-        }
+    h2 {
+        font-size: 30px;
+        text-align: left;
+        padding: 30px;
+        margin: 30px;
+    }
 
-        img.rounded-circle {
-            width: 105px;
-        }
+    img.rounded-circle {
+        width: 105px;
+    }
 
-        .detalhes-left {
-            padding: 30px;
-            margin: auto;
-            text-align: initial;
-            -webkit-column-count: auto; /* Chrome, Safari, Opera */
-            -moz-column-count: auto; /* Firefox */
-            column-count: auto;
-        }
+    .detalhes-left {
+        padding: 30px;
+        margin: auto;
+        text-align: initial;
+        -webkit-column-count: auto; /* Chrome, Safari, Opera */
+        -moz-column-count: auto; /* Firefox */
+        column-count: auto;
+    }
 
-        .negrito {
-            margin: 2px;
-            font-weight: 50;
-            color: #eeebeb;
-            text-align: left;
-        }
+    .negrito {
+        margin: 2px;
+        font-weight: 50;
+        color: #eeebeb;
+        text-align: left;
+    }
 
-        negrito {
-            font-weight: 700;
-            color: white;
-        }
-
-
-        /*LOGIN SMARTPHONE*/
-
-        @media only screen and (max-width: 950px) {
-            .card-login {
-                width: 85%;
-            }
-        }
+    negrito {
+        font-weight: 700;
+        color: white;
+    }
 
 
+    /*LOGIN SMARTPHONE*/
 
-        @media only screen and (max-width: 600px) {
-            .main-login {
-                flex-direction: column;
-            }
-
-            .left-login > h1 {
-                display: none
-            }
-
-            .left-login {
-                width: 50%;
-                height: auto;
-            }
-
-            .right-login {
-                width: 130%;
-                height: auto;
-            }
-
-            .left-login-image {
-                width: 50vw;
-            }
-
-            .card-login {
-                width: 90%;
-            }
-
-            .btn-login {
-                margin: 15px;
-            }
-
-            .container {
-                width: 80%;
-            }
-        }
-
-
-
-
-
-        /*REGISTER SMARTPHONE*/
-
-        @media only screen and (max-width: 950px) {
-            .card-register {
-                width: 85%;
-            }
-        }
-
-
-
-        @media only screen and (max-width: 600px) {
-
-
-
-            .left-register {
-                width: 140%;
-                height: auto;
-            }
-
-            .right-register {
-                width: 130%;
-                height: auto;
-            }
-
-            .left-register-image {
-                width: 50vw;
-            }
-
-            .card-register {
-                width: 90%;
-            }
-
-            .container {
-                width: 70%;
-            }
-        }
-
-
-        /*Usuario Smartphone*/
-
-        @media only screen and (max-width: 950px) {
-            table {
-                width: 85%;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-
-            .container-usuario {
-                padding: 15px;
-                margin: 0px;
-            }
-
-            table {
-                border: none;
-                width: 400px;
-            }
-
-                table tbody tr td {
-                    display: block;
-                    text-align: right;
-                    border: none;
-                }
-
-                    table tbody tr td:before {
-                        content: attr(data-title);
-                        position: absolute;
-                        left: 15px;
-                        display: block;
-                        font-weight: 600;
-                        font-size: 1em;
-                    }
-
-
-                table thead {
-                    display: none;
-                }
-
-                table tbody tr {
-                    margin: 10px;
-                    display: block;
-                    border: 1px solid #dad6eb;
-                    border-radius: 12px;
-                    padding: 2px 1px;
-                }
-
-                    table tbody tr td button {
-                        width: 100%;
-                    }
+    @media only screen and (max-width: 950px) {
+        .card-login {
+            width: 85%;
         }
     }
+
+
+
+    @media only screen and (max-width: 600px) {
+        .main-login {
+            flex-direction: column;
+        }
+
+        .left-login > h1 {
+            display: none
+        }
+
+        .left-login {
+            width: 50%;
+            height: auto;
+        }
+
+        .right-login {
+            width: 130%;
+            height: auto;
+        }
+
+        .left-login-image {
+            width: 50vw;
+        }
+
+        .card-login {
+            width: 90%;
+        }
+
+        .btn-login {
+            margin: 15px;
+        }
+
+        .container {
+            width: 80%;
+        }
+    }
+
+
+
+
+
+    /*REGISTER SMARTPHONE*/
+
+    @media only screen and (max-width: 950px) {
+        .card-register {
+            width: 85%;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+
+
+
+        .left-register {
+            width: 140%;
+            height: auto;
+        }
+
+        .right-register {
+            width: 130%;
+            height: auto;
+        }
+
+        .left-register-image {
+            width: 50vw;
+        }
+
+        .card-register {
+            width: 90%;
+        }
+
+        .container {
+            width: 70%;
+        }
+    }
+
+
+    /*Usuario Smartphone*/
+
+    @media only screen and (max-width: 950px) {
+        table {
+            width: 85%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .container-usuario {
+            padding: 15px;
+            margin: 0px;
+        }
+
+        table {
+            border: none;
+            width: 400px;
+        }
+
+            table tbody tr td {
+                display: block;
+                text-align: right;
+                border: none;
+            }
+
+                table tbody tr td:before {
+                    content: attr(data-title);
+                    position: absolute;
+                    left: 15px;
+                    display: block;
+                    font-weight: 600;
+                    font-size: 1em;
+                }
+
+
+            table thead {
+                display: none;
+            }
+
+            table tbody tr {
+                margin: 10px;
+                display: block;
+                border: 1px solid #dad6eb;
+                border-radius: 12px;
+                padding: 2px 1px;
+            }
+
+                table tbody tr td button {
+                    width: 100%;
+                }
+    }
+
+
+    /*Contato SMARTPHONE*/
+
+    @media only screen and (max-width: 950px) {
+        table {
+            width: 85%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .card-contato {
+            width: 32vh;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .contato-image {
+            width: 100%;
+        }
+
+        .left-contato {
+            margin-left: 0px;
+            margin-top: 20px;
+        }
+    }
+}
