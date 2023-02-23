@@ -31,94 +31,105 @@
 
 
 
+<body class="register-page">
 
 
-
-<div class="main-register">
-    <div class="left-register">
-        <img src="~/images/logobranco-1.png" class="left-register-image" height="292" width="302">
-        <br />
-
-
-        <div class="card-register">
-            <font color="#FF8F1B"><h1>Criar uma nova conta</h1></font>
-            <font color="white"><center><h4>É rápido e fácil.</h4></center></font>
-            <div class="col-md-10">
-                <form asp-controller="Account" asp-action="Register" method="post">
-                    <div asp-validation-summary="All" class="text-danger"></div>
-
-                    <div class="text-field">
-                        <label for="Nome">Nome</label>
-                        <input asp-for="Nome" name="Nome" placeholder="Nome" class="form-control" />
-                        <span asp-validation-for="Nome" class="text-danger"></span>
-                    </div>
-
-                    <div class="text-field">
-                        <label for="Sobrenome">Sobrenome</label>
-                        <input asp-for="Sobrenome" name="Sobrenome" placeholder="Sobrenome" class="form-control" />
-                        <span asp-validation-for="Sobrenome" class="text-danger"></span>
-                    </div>
-
-                    <div class="text-field">
-                        <label for="Endereco">Endereco</label>
-                        <input asp-for="Endereco" name="Endereco" placeholder="Endereço" class="form-control" />
-                        <span asp-validation-for="Endereco" class="text-danger"></span>
-                    </div>
-
-                    <div class="text-field">
-                        <label for="PhoneNumber"> Celular</label>
-                        <input asp-for="PhoneNumber" name="PhoneNumber" placeholder="Celular" class="form-control" />
-                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                    </div>
-
-                    <div class="text-field">
-                        <label for="Idade"> Idade</label>
-                        <input asp-for="Idade" name="Idade" placeholder="Idade" class="form-control" />
-                        <span asp-validation-for="Idade" class="text-danger"></span>
-                    </div>
-
-                    <div class="text-field">
-                        <label for="Email">Email</label>
-                        <input asp-for="Email" name="Email" placeholder="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
+    <div class="main-register">
+        <div class="left-register">
+            <img src="~/images/logobranco-1.png" class="left-register-image" height="292" width="302">
+            <br />
 
 
-                    <div class="text-field">
-                        <label asp-for="Password">Senha</label>
-                        <input asp-for="Password" placeholder="Senha" class="form-control" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="text-field">
-                        <label for="Password">Confirmar Senha</label>
-                        <input asp-for="ConfirmPassword" name="Confirmar Senha" placeholder="Confirmar Senha" class="form-control" />
-                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                    </div>
+            <div class="card-register">
+                <font color="#FF8F1B"><h1>Criar uma nova conta</h1></font>
+                <font color="white"><center><h4>É rápido e fácil.</h4></center></font>
+                <div class="col-md-10">
+                    <form asp-controller="Account" asp-action="Register" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
 
-                    <div class="campo">
-                        <label>Gênero</label>
+                        <div class="text-field">
+                            <label for="Nome">Nome</label>
+                            <input asp-for="Nome" name="Nome" placeholder="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
 
-                        <input type="radio" name="Genero" value="1" />
-                        <label for="Genero">Feminino</label>
-                        <span asp-validation-for="Genero" class="text-danger"></span>
+                        <div class="text-field">
+                            <label for="Sobrenome">Sobrenome</label>
+                            <input asp-for="Sobrenome" name="Sobrenome" placeholder="Sobrenome" class="form-control" />
+                            <span asp-validation-for="Sobrenome" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-field">
+                            <label for="Endereco">Endereco</label>
+                            <input asp-for="Endereco" name="Endereco" placeholder="Endereço" class="form-control" />
+                            <span asp-validation-for="Endereco" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-field">
+                            <label for="PhoneNumber"> Celular</label>
+                            <input asp-for="PhoneNumber" name="PhoneNumber" placeholder="Celular" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-field">
+                            <label for="Idade"> Idade</label>
+                            <input asp-for="Idade" name="Idade" placeholder="Idade" class="form-control" />
+                            <span asp-validation-for="Idade" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-field">
+                            <label for="Email">Email</label>
+                            <input asp-for="Email" name="Email" placeholder="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
 
 
-                        <input type="radio" name="Genero" value="2" />
-                        <label for="Genero">Masculino</label>
-                        <span asp-validation-for="Genero" class="text-danger"></span>
+                        <div class="text-field">
+                            <label asp-for="Password">Senha</label>
+                            <input asp-for="Password" placeholder="Senha" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="text-field">
+                            <label for="Password">Confirmar Senha</label>
+                            <input asp-for="ConfirmPassword" name="Confirmar Senha" placeholder="Confirmar Senha" class="form-control" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
 
-                        <input type="radio" name="Genero" value="3" />
-                        <label for="Genero">Outro</label>
-                        <span asp-validation-for="Genero" class="text-danger"></span>
-                    </div>
+                        @* <div class="campo">
+                            <label>Gênero</label>
 
-                    <button type="submit" class="btn-register">Cadastre-se</button>
-                    <center><h4><a asp-controller="Account" asp-action="Login" class="btn btn-link"><h4>Já tem uma conta?</h4></a></h4></center>
-                </form>
+                            <input type="radio" name="Genero" value="1" />
+                            <label for="Genero">Feminino</label>
+                            <span asp-validation-for="Genero" class="text-danger"></span>
+
+
+                            <input type="radio" name="Genero" value="2" />
+                            <label for="Genero">Masculino</label>
+                            <span asp-validation-for="Genero" class="text-danger"></span>
+
+                            <input type="radio" name="Genero" value="3" />
+                            <label for="Genero">Outro</label>
+                            <span asp-validation-for="Genero" class="text-danger"></span>
+                            </div>*@
+                        <div class="campo">
+                            <label for="genero">Gênero:</label>
+                            <select id="genero" name="genero">
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="nao-binario">Não-Binário</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-register">Cadastre-se</button>
+                        <center><h4><a asp-controller="Account" asp-action="Login" class="btn btn-link"><h4>Já tem uma conta?</h4></a></h4></center>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+</body>
     @section Scripts {
     @{
     await Html.RenderPartialAsync("_ValidationScriptsPartial");

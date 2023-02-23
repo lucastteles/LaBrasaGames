@@ -12,6 +12,7 @@ namespace LaBrasa.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -29,10 +30,7 @@ namespace LaBrasa.MVC.Controllers
             return View();
         }
 
-        public IActionResult Jogos()
-        {
-            return View();
-        }
+        
 
 
     }
