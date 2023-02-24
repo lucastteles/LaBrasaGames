@@ -36,7 +36,7 @@
 
     <div class="main-register">
         <div class="left-register">
-            <img src="~/images/logobranco-1.png" class="left-register-image" height="292" width="302">
+            <img src="~/images/LogoLabrasaGame-removebg-preview.png" class="left-register-image" height="292" width="302">
             <br />
 
 
@@ -111,15 +111,46 @@
                             <label for="Genero">Outro</label>
                             <span asp-validation-for="Genero" class="text-danger"></span>
                             </div>*@
-                        <div class="campo">
+
+
+                        @*<div class="campo">
                             <label for="genero">Gênero:</label>
                             <select id="genero" name="genero">
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                                <option value="nao-binario">Não-Binário</option>
-                                <option value="outro">Outro</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="nao-binario">Não-Binário</option>
+                            <option value="outro">Outro</option>
                             </select>
-                        </div>
+                            </div>*@
+                        @*
+                            <div class="campo">
+                            <input type="radio" id="1" name="Feminino">
+                            <label for="1">Feminino</label>
+
+                            <input type="radio" id="2" name="Masculino">
+                            <label for="2">Masculino</label>
+
+                            <input type="radio" id="3" name="Outro">
+                            <label for="3">Outro</label>
+                            </div>*@
+
+                        
+                            <fieldset>
+                                <h6>Gênero:</h6>
+                                <input type="radio" id="1" name="genero" value="masculino">
+                                <label for="genero">Masculino</label>
+                                <br>
+                                <input type="radio" id="2" name="genero" value="feminino">
+                                <label for="genero">Feminino</label>
+                                <br>
+                                <input type="radio" id="3" name="genero" value="outro">
+                                <label for="genero">Outro</label>
+                                <br>
+                            </fieldset>
+                        
+
+
+
 
                         <button type="submit" class="btn-register">Cadastre-se</button>
                         <center><h4><a asp-controller="Account" asp-action="Login" class="btn btn-link"><h4>Já tem uma conta?</h4></a></h4></center>

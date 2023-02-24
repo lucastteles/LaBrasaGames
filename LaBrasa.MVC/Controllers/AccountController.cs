@@ -65,7 +65,7 @@ namespace LaBrasa.MVC.Controllers
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.(password must be strong).");
+                ModelState.AddModelError(string.Empty, "Email ou senha Inválidos.");
                 return View(model);
             }
         }
