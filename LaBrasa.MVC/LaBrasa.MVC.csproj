@@ -14,8 +14,4 @@
     <ProjectReference Include="..\LaBrasa.Infra.Ioc\LaBrasa.Infra.Ioc.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Admin\Views\Shared\" />
-  </ItemGroup>
-
 </Project>

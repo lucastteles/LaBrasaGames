@@ -29,13 +29,6 @@ namespace LaBrasa.Domain.Entidade
 
         }
 
-        //public Usuario(int idIdentity, string nome, string sobrenome, string endereco, GeneroEnum genero, int idade)
-        //{
-        //    DomainExceptionValidation.When(idIdentity < 0, "Invalid Id value");
-        //    IdIdentity = idIdentity;
-        //    ValidateDomain(nome, sobrenome, endereco, genero, idade);
-        //}
-
 
         private void ValidateDomain(string nome, string sobrenome, string endereco, GeneroEnum genero, int idade)
         {
@@ -50,8 +43,6 @@ namespace LaBrasa.Domain.Entidade
             DomainExceptionValidation.When(string.IsNullOrEmpty(endereco), "Endereço inválido. Endereço é obrigatório");
 
             DomainExceptionValidation.When(endereco.Length < 10, "Endereço inválido, minimo 10 caracteres");
-
-            // DomainExceptionValidation.When(genero.Feminino), "Gênero inválido. Gênero é obrigatório");
 
             DomainExceptionValidation.When(idade < 0, "Idade inválida");
 

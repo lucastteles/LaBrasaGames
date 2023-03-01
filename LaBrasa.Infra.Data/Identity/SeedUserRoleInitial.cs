@@ -27,10 +27,10 @@ namespace LaBrasa.Infra.Data.Identity
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = "usuario@gmail.com";
                 user.Email = "usuario@gmail.com";
-                user.PhoneNumber = "21975518858";  //////////////////////
+                user.PhoneNumber = "21975518858";  
                 user.NormalizedUserName = "USUARIO@GMAIL.COM";
                 user.NormalizedEmail = "USUARIO@GMAIL.COM";
-                user.PhoneNumberConfirmed = true;  ////////////////////
+                user.PhoneNumberConfirmed = true; 
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
@@ -48,10 +48,10 @@ namespace LaBrasa.Infra.Data.Identity
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = "admin@local.com.br";
                 user.Email = "admin@local.com.br";
-                user.PhoneNumber = "21975518853";  /////////////////////
+                user.PhoneNumber = "21975518853"; 
                 user.NormalizedUserName = "admin@local.com.br";
                 user.NormalizedEmail = "ADMIN@LOCAL.COM.BR";
-                user.PhoneNumberConfirmed = true;  /////////////////////
+                user.PhoneNumberConfirmed = true; 
                 user.EmailConfirmed = true;
                 user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();

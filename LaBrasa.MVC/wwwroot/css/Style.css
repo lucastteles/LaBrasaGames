@@ -1,4 +1,5 @@
 ﻿/*Layout*/
+
 body {
     background-image: url(../images/PlanodeFundo.jpg);
 }
@@ -280,6 +281,11 @@ body {
 
 
     .text-field > input::placeholder {
+        /*padding-left: 30px;*/ /* espaço para o ícone */
+        /*background-image: url("/Images/mail.png");*/ /* url da imagem do ícone */
+        /*background-repeat: no-repeat;
+        background-position: left center;*/ /* posiciona o ícone à esquerda */
+        /*background-size: 20px;*/ /* tamanho do ícone */
         color: #808080;
     }
 
@@ -682,7 +688,15 @@ table {
 .contato-image {
     width: 50%;
 }
+.imagem-e-texto img {
+    float: left;
+    margin-right: 5px;
+    
+}
 
+.imagem-e-texto p {
+    margin-top: 0;
+}
 /*deu certo assim*/
 /*img{
     width:50%;

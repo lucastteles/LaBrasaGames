@@ -54,8 +54,7 @@ namespace LaBrasa.MVC
            
            
 
-            ///////////////////////////
-            ///
+            
            
             services.AddMemoryCache(); //Registrando os middes (Onde São Armazenados os Dados)
             services.AddSession(options => //Recurso para Salvar e Armazenar dados do Usuário
@@ -94,9 +93,8 @@ namespace LaBrasa.MVC
             seedUserRoleInitial.SeedUsers(); //SeedUsersRoles
 
 
-            ////////////////////////////////
             app.UseSession();
-            app.UseAuthentication();//Sempre Antes da Autorização ///////////////////////////////////////////////
+            app.UseAuthentication();//Sempre Antes da Autorização 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
