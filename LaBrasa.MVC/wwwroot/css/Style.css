@@ -616,11 +616,19 @@ label {
 
 /********************************************************/
 
+.index-page {
+    margin-top: 70px;
+}
 
 .Titulo-carrosel {
     margin-left: -70px;
 }
+.seta-carrosel {
+    margin-left: 98px;
+}
+
 .carousel {
+    
     margin-left: -70px;
     width: 170%;
     display: flex;
@@ -631,9 +639,8 @@ label {
 }
 
 .card {
-    flex: 0 0 calc(50% - 0px);
-    margin: 0 3px;
-    width: 10%;
+    flex: 0 0 calc(43% - 0px);
+    margin: 0 6px;
     scroll-snap-align: start;
     background: #1C1C1C;
     box-shadow: 0px 10px 4px #5b5b58;
@@ -647,11 +654,11 @@ label {
     }
 
 
-/*PERFIL*/
+    /*PERFIL*/
 
 
 
-body-perfil {
+    body-perfil {
     background-color: #fff;
     text-align: center;
     margin: 25px;
