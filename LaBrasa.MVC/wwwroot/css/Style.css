@@ -492,12 +492,56 @@ label {
 }
 
 
+/*Teste Jogo*/
+
+/*.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+    .carousel img {
+        flex: 0 0 90%;*//*tava 100*/
+        /*max-width: 100%;
+        height: auto;
+    }
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}*/
+
+
+
+
+
+
+
 /*JOGO INDEX*/
 
 
 
 
-
+/*********************************************************/
 .index-page {
     margin-top: 70px;
 }
@@ -510,6 +554,9 @@ label {
 .seta-carrosel {
     margin-left: 98px;
 }
+/***********************************************************/
+
+
 
 /*.carousel {
     margin-left: -360px;
@@ -522,12 +569,23 @@ label {
     /* "auto" or "thin" */
     /*scrollbar-color: blue orange;*/ /* scroll thumb and track */
 /*}*/
+
+
+
+
+
+
+
+
+
+/*****************************************************************************/
+
 .carousel {
     margin-left: -360px;
     width: 170%;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    /*overflow-x: auto;*/ /*************/
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     /* "auto" or "thin" */
@@ -537,7 +595,10 @@ label {
     scroll-snap-align: center;
     transition: transform 0.3s ease-in-out;
 }
-.carousel::-webkit-scrollbar {
+
+
+
+/*.carousel::-webkit-scrollbar {
     width: 5px;
     height: 12px;
 }
@@ -550,7 +611,13 @@ label {
 .carousel::-webkit-scrollbar-track {
     background-color:  #FF8F1B;
     border-radius: 10px;
-}
+}*/
+/*******************************************************************/
+
+
+
+
+
 
 /*.scroll-container::-webkit-scrollbar {
     width: 8px;
@@ -567,6 +634,10 @@ label {
     border-radius: 4px;
 }*/
 
+
+
+
+/***************************************************************/
 .card {
     flex: 0 0 calc(18% - 0px);
     margin: 0 6px;
@@ -583,7 +654,38 @@ label {
         width: 100%;
         height: 180px;
     }
-/*.index-page {
+
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 10%;
+    height: 182px;
+    color: white;
+    font-size: 60px;
+    background-color: rgba(0,0,0,.9); /* branco com 50% de transparência */
+}
+
+.prev-button {
+    left: -260px;
+}
+
+.next-button {
+    right: -260px;
+}
+
+.carousel-container {
+    position: relative;
+    
+}
+/******************************************************************/
+    /*.index-page {
     margin-top: 70px;
 }
 
@@ -619,11 +721,8 @@ label {
         border-radius: 10px;
         box-shadow: 0px 3px #FF8F1B;
     }*/
-
-
     /*Jogos Smartphone*/
-
-@media only screen and (max-width: 950px) {
+    /*@media only screen and (max-width: 950px) {
 
     .index-page {
         width: 100%;
@@ -673,11 +772,9 @@ label {
             border-radius: 10px;
             box-shadow: 0px 3px #FF8F1B;
         }
-}
-
-
-/*PERFIL*/
-body-perfil {
+}*/
+    /*PERFIL*/
+    body-perfil {
     background-color: #fff;
     text-align: center;
     margin: 25px;
