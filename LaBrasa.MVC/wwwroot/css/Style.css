@@ -21,6 +21,14 @@ body {
     display: none;
 }
 
+.login-page header-navbar {
+    display: none;
+}
+
+.register-page header-navbar {
+    display: none;
+}
+
 
 body {
     width: 100%;
