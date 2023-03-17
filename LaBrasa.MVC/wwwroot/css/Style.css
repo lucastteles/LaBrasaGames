@@ -89,6 +89,7 @@ body {
     position: fixed;
     transition: all .2s linear;
     left: -250px;
+    z-index: 1;
 }
 
 nav {
@@ -116,6 +117,11 @@ nav {
     .Link:hover {
         background-color: #076992;
         color: #ffffff;
+    }
+
+    .Link ion-icon {
+        margin-right: 20px;
+        font-size: 20px;
     }
 
 #check:checked ~ .barra {
@@ -385,70 +391,7 @@ body {
 }
 
 
-/*.campo {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: normal;
-    align-items: center;
-}
 
-
-    .campo > label {
-        margin-bottom: 10px;
-        color: white;
-        display: block;
-    }
-
-
-
-
-    .campo > input {
-        background: white;
-        display: inline-flex;
-    }
-*/
-
-/*.campo > label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-.campo > select {
-    font-size: 16px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}*/
-
-/*input[type="radio"] {
-    appearance: none;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-}
-
-    input[type="radio"]:checked::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #fff;
-    }
-
-    label {
-    color: #fff;
-    }*/
 
 input[type="radio"] {
     appearance: none;
@@ -508,47 +451,6 @@ label {
 }
 
 
-/*Teste Jogo*/
-
-/*.carousel-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-    .carousel img {
-        flex: 0 0 90%;*/ /*tava 100*/
-/*max-width: 100%;
-        height: auto;
-    }
-
-.prev-button,
-.next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.prev-button {
-    left: 10px;
-}
-
-.next-button {
-    right: 10px;
-}*/
-
-
-
-
 
 
 
@@ -572,28 +474,6 @@ label {
 }
 /***********************************************************/
 
-
-
-/*.carousel {
-    margin-left: -360px;
-    width: 170%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;*/
-/* "auto" or "thin" */
-/*scrollbar-color: blue orange;*/ /* scroll thumb and track */
-/*}*/
-
-
-
-
-
-
-
-
-
 /*****************************************************************************/
 
 .carousel {
@@ -604,12 +484,10 @@ label {
     justify-content: center;
     flex-wrap: nowrap;
     position: relative;
-    /*overflow-x: auto;*/ /*************/
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     overflow: hidden;
-    /* "auto" or "thin" */
-    /*scrollbar-color: blue orange;*/ /* scroll thumb and track */
+    
 }
 
 .carousel-container {
@@ -617,51 +495,6 @@ label {
     width: calc(100% * 4);
     transition: transform 0.3s ease-in-out;
 }
-
-/*.carousel-item {
-    scroll-snap-align: center;
-    transition: transform 0.3s ease-in-out;
-}*/ /****************************************************************/
-
-
-
-/*.carousel::-webkit-scrollbar {
-    width: 5px;
-    height: 12px;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
-}
-
-.carousel::-webkit-scrollbar-track {
-    background-color:  #FF8F1B;
-    border-radius: 10px;
-}*/
-/*******************************************************************/
-
-
-
-
-
-
-/*.scroll-container::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-    background-color: #cccccc;
-    border-radius: 4px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-    background-color: #f2f2f2;
-    border-radius: 4px;
-}*/
-
-
 
 
 /***************************************************************/
@@ -691,7 +524,6 @@ label {
     padding: 10px;
     border: none;
     cursor: pointer;
-    z-index: 1;
     width: 5%;
     height: 182px;
     color: white;
@@ -715,43 +547,8 @@ label {
 }
 
 
-/******************************************************************/
-/*.index-page {
-    margin-top: 70px;
-}
 
-.Titulo-carrosel {
-    margin-left: -70px;
-}
-.seta-carrosel {
-    margin-left: 98px;
-}
 
-.carousel {
-    margin-left: -70px;
-    width: 170%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    
-}
-
-.card {
-    flex: 0 0 calc(43% - 0px);
-    margin: 0 6px;
-    scroll-snap-align: start;
-    background: #1C1C1C;
-    box-shadow: 0px 10px 4px #5b5b58;
-}
-
-    .card img {
-        border-radius: 15px;
-        height: 10vh;
-        border-radius: 10px;
-        box-shadow: 0px 3px #FF8F1B;
-    }*/
 /*Jogos Smartphone*/
 @media only screen and (max-width: 950px) {
 
@@ -811,6 +608,11 @@ label {
 }
 
 /*PERFIL*/
+
+.perfil-page{
+    margin-top:70px;
+}
+
 body-perfil {
     background-color: #fff;
     text-align: center;
@@ -862,6 +664,10 @@ negrito {
 
 
 /*Usuario*/
+
+.usuario-page{
+    margin-top:70px;
+}
 
 .conteudo:hover {
     background-color: #076992;
@@ -937,7 +743,9 @@ table {
 
 /*CONTATO*/
 
-
+.contato-page{
+    margin-top:70px;
+}
 .main-contato {
     color: #fff;
 }
@@ -963,10 +771,7 @@ table {
 .imagem-e-texto p {
     margin-top: 0;
 }
-/*deu certo assim*/
-/*img{
-    width:50%;
-}*/
+
 
 
 
@@ -986,7 +791,8 @@ table {
 
 @media only screen and (max-width: 600px) {
     .container-perfil {
-        width: 130%;
+        width: 150%;
+        margin-left: -50px;
         height: 85vh;
         padding: 30px 35px;
         border-radius: 25px;
@@ -1187,7 +993,9 @@ table {
 @media only screen and (max-width: 600px) {
 
     .card-contato {
-        width: 32vh;
+        width: 36vh;
+        margin-top: 50px;
+        margin-left: -50px;
         flex-direction: column;
         align-items: flex-start;
     }

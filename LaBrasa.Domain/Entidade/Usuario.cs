@@ -38,7 +38,7 @@ namespace LaBrasa.Domain.Entidade
 
             DomainExceptionValidation.When(string.IsNullOrEmpty(sobrenome), "Sobrenome inválido. Sobrenome é obrigatório");
 
-            DomainExceptionValidation.When(sobrenome.Length < 5, "Sobrenome inválido, minimo 3 caracteres");
+            DomainExceptionValidation.When(sobrenome.Length < 5, "Sobrenome inválido, minimo 5 caracteres");
 
             DomainExceptionValidation.When(string.IsNullOrEmpty(endereco), "Endereço inválido. Endereço é obrigatório");
 
