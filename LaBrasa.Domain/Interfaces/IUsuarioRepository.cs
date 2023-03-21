@@ -10,6 +10,8 @@ namespace LaBrasa.Domain.Interfaces
     public interface IUsuarioRepository
     {
         Task<IEnumerable<Usuario>> ObterUsuarios();
+
+        Task<IEnumerable<Usuario>> ObterUsuarioPorGenero(string genero);
         Task<Usuario> ObterPorId(Guid id); 
         Task<Usuario> AdicionarUsuario(Usuario usuario);
         Task<Usuario> Atualizar(Usuario usuario);

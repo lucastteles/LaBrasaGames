@@ -739,6 +739,15 @@ table {
         cursor: pointer;
     }
 
+.barra-pesquisa {
+    width: 500px;
+    display: block; /* torna o elemento um bloco */
+    margin: 0 auto;
+    border-color: #FF8F1B;
+    border-radius: 25px;
+    box-shadow: 0px 2px 10px #FF8F1B;
+}
+
 
 
 /*CONTATO*/
@@ -928,6 +937,7 @@ table {
 
 /*Usuario Smartphone*/
 
+
 @media only screen and (max-width: 950px) {
     table {
         width: 85%;
@@ -939,6 +949,7 @@ table {
     .container-usuario {
         padding: 15px;
         margin: 0px;
+        margin-left: -95px;
     }
 
     table {
@@ -951,7 +962,8 @@ table {
             text-align: right;
             margin: 5px;
             border: none;
-            width: 300px;
+            width: 350px;
+            height: 25px
         }
 
             table tbody tr td:before {
@@ -974,11 +986,21 @@ table {
             border: 1px solid #dad6eb;
             border-radius: 12px;
             padding: 2px 1px;
+            height: 200px;
         }
 
             table tbody tr td button {
                 width: 100%;
+                height: 10px;
             }
+
+    .barra-pesquisa {
+        width: 300px;
+        margin-left: -40px;
+        border-color: #FF8F1B;
+        border-radius: 25px;
+        box-shadow: 0px 2px 10px #FF8F1B;
+    }
 }
 
 

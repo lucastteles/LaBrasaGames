@@ -52,5 +52,23 @@ namespace LaBrasa.Infra.Data.Repositories
             await _usuarioContext.SaveChangesAsync();
             return usuario;
         }
+
+        public async Task<IEnumerable<Usuario>> ObterUsuarioPorGenero(string genero)
+        {
+            //return await _usuarioContext.Usuario
+            //     .Where(p => p.Genero.ToString()////////******/ 
+            //     .Contains(genero.ToLower()))
+            //     .ToListAsync();
+            return await _usuarioContext.Usuario
+             .Where(p => p.Genero.ToString()
+             .ToLower() == genero.ToLower())
+             .ToListAsync();
+        }
+
+        //return await _usuarioContext.Usuario
+        //     .Where(p => p.Nome.ToLower()
+        //     .Contains(nome.ToLower()))
+        //     .ToListAsync();
     }
+
 }

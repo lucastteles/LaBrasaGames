@@ -1,66 +1,72 @@
 ﻿@model IEnumerable<LaBrasa.MVC.ViewModels.UsuarioViewModel>
 
 <body class="usuario-page">
-<div class="container-usuario">
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Nome
-                </th>
+    <div>
+        <form class="navbar-form navbar-right" asp-controller="AdminAccount" asp-action="Search" method="get">
+            <div class="barra-pesquisa">
+                <input type="text" class="form-control" placeholder="Procurar Servico" name="searchString" value="@ViewData["searchString"]">
+            </div>
+        </form>
+    </div>
 
-                <th>
-                    Endereco
-                </th>
-                <th>
-                    Idade
-                </th>
+    <div class="container-usuario">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
 
-                <th>
-                    Genero
-                </th>
+                    <th>
+                        Endereco
+                    </th>
+                    <th>
+                        Idade
+                    </th>
 
-                <th>
-                    Email
-                </th>
-                <th>
-                    Telefone
-                </th>
+                    <th>
+                        Genero
+                    </th>
+
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
 
 
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr class="conteudo">
-                    <td data-title="Nome">
-                        @Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Sobrenome)
-                    </td>
-
-                    <td data-title="Endereco">
-                        @Html.DisplayFor(modelItem => item.Endereco)
-                    </td>
-                    <td data-title="Idade">
-                        @Html.DisplayFor(modelItem => item.Idade)
-                    </td>
-                    <td data-title="Genero">
-                        @Html.DisplayFor(modelItem => item.Genero)
-                    </td>
-                    <td data-title="Email">
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td data-title="Telefone">
-                        @Html.DisplayFor(modelItem => item.PhoneNumber)
-                    </td>
-
-                    <td>
-                        <button>ver tudo</button>
-                    </td>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="conteudo">
+                        <td data-title="Nome">
+                            @Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Sobrenome)
+                        </td>
+
+                        <td data-title="Endereco">
+                            @Html.DisplayFor(modelItem => item.Endereco)
+                        </td>
+                        <td data-title="Idade">
+                            @Html.DisplayFor(modelItem => item.Idade)
+                        </td>
+                        <td data-title="Genero">
+                            @Html.DisplayFor(modelItem => item.Genero)
+                        </td>
+                        <td data-title="Email">
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td data-title="Telefone">
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </body>

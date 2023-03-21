@@ -9,7 +9,9 @@ namespace Labrasa.Application.Interfaces
 {
     public interface IUsuarioService
     {
-        Task<IEnumerable<UsuarioDTO>> ObterUsuario(); 
+        Task<IEnumerable<UsuarioDTO>> ObterUsuario();
+
+        Task<IEnumerable<UsuarioDTO>> ObterUsuarioPorGenero(string genero);
         Task<UsuarioDTO> ObterPorId(Guid id);
         Task Adicionar(UsuarioDTO usuarioDTO);
         Task Atualizar(UsuarioDTO usuarioDTO);

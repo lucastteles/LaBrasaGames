@@ -56,6 +56,13 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
             return View(usersVM);
         }
 
-        
+        [HttpGet]
+        public async Task<IActionResult> Search(string searchString)
+        {
+            var result = await _usuarioService.ObterUsuarioPorGenero(searchString);
+            return View(result);
+        }
+
+
     }
 }

@@ -52,5 +52,14 @@ namespace Labrasa.Application.Services
             var usuarioEntity = _usuarioRepository.ObterPorId(id).Result;
             await _usuarioRepository.Remover(usuarioEntity);
         }
+
+        public async Task<IEnumerable<UsuarioDTO>> ObterUsuarioPorGenero(string genero)
+        {
+            if (string.IsNullOrEmpty(genero))
+                return new List<UsuarioDTO>();
+
+            var usuarioEntity = await _usuarioRepository.ObterUsuarioPorGenero(genero);
+            return _mapper.Map<IEnumerable<UsuarioDTO>>(usuarioEntity);
+        }
     }
 }
