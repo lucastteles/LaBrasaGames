@@ -1,57 +1,66 @@
-﻿@model IEnumerable<Labrasa.Application.DTOs.UsuarioDTO>
+﻿@model IEnumerable<LaBrasa.MVC.ViewModels.UsuarioViewModel>
 
-@{
-    ViewData["Title"] = "Prestador De Serviço";
-}
 
-<div>
-    <h2>@ViewData["Title"]</h2>
-</div>
-<hr />
-<div class="row">
-    <div class="col-md-12">
-        <div>
-        </div>
-    </div>
-</div>
-<br />
-<div class="panel panel-default">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>
-                    Nome
-                </th>
-                <th>
-                    Email
-                </th>
-                <th>
-                    Genero
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+
+<body class="usuario-page">
+    <div class="container-usuario">
+        <table>
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genero)
-                    </td>
-                    <td>
-                   @* <td>
-                        <a asp-action="Details" asp-route-id="@item.Id" title="Details" class="btn btn-primary">
-                            <span class="fas fa-search">Informações</span>
-                        </a>
-                    </td>*@
+                    <th>
+                        Nome
+                    </th>
+
+                    <th>
+                        Endereco
+                    </th>
+                    <th>
+                        Idade
+                    </th>
+
+                    <th>
+                        Genero
+                    </th>
+
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
+
+
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="conteudo">
+                        <td data-title="Nome">
+                            @Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Sobrenome)
+                        </td>
+
+                        <td data-title="Endereco">
+                            @Html.DisplayFor(modelItem => item.Endereco)
+                        </td>
+                        <td data-title="Idade">
+                            @Html.DisplayFor(modelItem => item.Idade)
+                        </td>
+                        <td data-title="Genero">
+                            @Html.DisplayFor(modelItem => item.Genero)
+                        </td>
+                        <td data-title="Email">
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td data-title="Telefone">
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

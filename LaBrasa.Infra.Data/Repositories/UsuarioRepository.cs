@@ -49,20 +49,20 @@ namespace LaBrasa.Infra.Data.Repositories
         public async Task<Usuario> Remover(Usuario usuario)
         {
             _usuarioContext.Remove(usuario);
-            await _usuarioContext.SaveChangesAsync();
+            await _usuarioContext.SaveChangesAsync(); 
             return usuario;
         }
 
-        public async Task<IEnumerable<Usuario>> ObterUsuarioPorGenero(string genero)
+        public async Task<IEnumerable<Usuario>> ObterUsuarioPorNome(string nome)
         {
-            //return await _usuarioContext.Usuario
-            //     .Where(p => p.Genero.ToString()////////******/ 
-            //     .Contains(genero.ToLower()))
-            //     .ToListAsync();
             return await _usuarioContext.Usuario
-             .Where(p => p.Genero.ToString()
-             .ToLower() == genero.ToLower())
-             .ToListAsync();
+                 .Where(p => p.Nome.ToLower()////////******/ 
+                 .Contains(nome.ToLower()))
+                 .ToListAsync();
+            //return await _usuarioContext.Usuario
+            // .Where(p => p.Genero.ToString()
+            // .ToLower() == genero.ToLower())
+            // .ToListAsync();
         }
 
         //return await _usuarioContext.Usuario
@@ -72,3 +72,6 @@ namespace LaBrasa.Infra.Data.Repositories
     }
 
 }
+
+
+

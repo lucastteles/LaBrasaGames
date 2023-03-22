@@ -59,10 +59,39 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Search(string searchString)
         {
-            var result = await _usuarioService.ObterUsuarioPorGenero(searchString);
-            return View(result);
+            //var result = await _usuarioService.ObterUsuarioPorNome(searchString);
+            //return View(result);
+
+
+            var usersIdentity = userManager.Users.Where(p => p.UserName.ToLower()////////******/ 
+                 .Contains(searchString.ToLower()));
+                 
+
+            var usuarios = await _usuarioService.ObterUsuarioPorNome(searchString);
+
+
+            var usersVM = new List<UsuarioViewModel>();
+
+            foreach (var user in usersIdentity)
+            {
+                var usuarioDto = usuarios.FirstOrDefault(x => x.IdIdentity.ToString() == user.Id);
+
+                usersVM.Add(new UsuarioViewModel()
+                {
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    Nome = usuarioDto?.Nome,
+                    Idade = usuarioDto?.Idade.ToString(),
+                    Sobrenome = usuarioDto?.Sobrenome,
+                    Endereco = usuarioDto?.Endereco,
+                    Genero = usuarioDto?.Genero.ToString(),
+                });
+            }
+
+            return View(usersVM);
         }
-
-
     }
+
+
+    
 }

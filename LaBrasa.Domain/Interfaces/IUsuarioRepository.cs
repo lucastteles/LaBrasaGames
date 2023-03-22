@@ -11,7 +11,7 @@ namespace LaBrasa.Domain.Interfaces
     {
         Task<IEnumerable<Usuario>> ObterUsuarios();
 
-        Task<IEnumerable<Usuario>> ObterUsuarioPorGenero(string genero);
+        Task<IEnumerable<Usuario>> ObterUsuarioPorNome(string nome);
         Task<Usuario> ObterPorId(Guid id); 
         Task<Usuario> AdicionarUsuario(Usuario usuario);
         Task<Usuario> Atualizar(Usuario usuario);

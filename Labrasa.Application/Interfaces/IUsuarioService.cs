@@ -11,7 +11,7 @@ namespace Labrasa.Application.Interfaces
     {
         Task<IEnumerable<UsuarioDTO>> ObterUsuario();
 
-        Task<IEnumerable<UsuarioDTO>> ObterUsuarioPorGenero(string genero);
+        Task<IEnumerable<UsuarioDTO>> ObterUsuarioPorNome(string nome);
         Task<UsuarioDTO> ObterPorId(Guid id);
         Task Adicionar(UsuarioDTO usuarioDTO);
         Task Atualizar(UsuarioDTO usuarioDTO);

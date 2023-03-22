@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<LaBrasa.MVC.ViewModels.UsuarioViewModel>
 
 <body class="usuario-page">
-    <div>
+    <div class="body-barra">
         <form class="navbar-form navbar-right" asp-controller="AdminAccount" asp-action="Search" method="get">
             <div class="barra-pesquisa">
                 <input type="text" class="form-control" placeholder="Procurar Usuário" name="searchString" value="@ViewData["searchString"]">

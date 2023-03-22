@@ -750,6 +750,13 @@ table {
 
 
 
+
+.container-usuario {
+    margin-top: 40px;
+}
+
+
+
 /*CONTATO*/
 
 .contato-page{
@@ -1001,6 +1008,8 @@ table {
         border-radius: 25px;
         box-shadow: 0px 2px 10px #FF8F1B;
     }
+
+    
 }
 
 

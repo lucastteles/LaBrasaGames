@@ -92,7 +92,7 @@ namespace LaBrasa.MVC.Controllers
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, "Invalid register attempt (password must be strong.");
+                ModelState.AddModelError(string.Empty, "Tentativa de registro inválida (a senha deve ser forte).");
                 return View(model);
             }
 
