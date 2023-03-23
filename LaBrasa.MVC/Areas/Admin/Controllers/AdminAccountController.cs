@@ -59,39 +59,79 @@ namespace LaBrasa.MVC.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Search(string searchString)
         {
-            //var result = await _usuarioService.ObterUsuarioPorNome(searchString);
-            //return View(result);
+          
 
-
-            var usersIdentity = userManager.Users.Where(p => p.UserName.ToLower()////////******/ 
-                 .Contains(searchString.ToLower()));
-                 
-
-            var usuarios = await _usuarioService.ObterUsuarioPorNome(searchString);
-
-
-            var usersVM = new List<UsuarioViewModel>();
-
-            foreach (var user in usersIdentity)
+            if (string.IsNullOrEmpty(searchString))
             {
-                var usuarioDto = usuarios.FirstOrDefault(x => x.IdIdentity.ToString() == user.Id);
 
-                usersVM.Add(new UsuarioViewModel()
+                var todosUsuarios = await _usuarioService.ObterUsuario();
+                var usuariosIdentity = userManager.Users.ToList();
+
+                var usersVM = new List<UsuarioViewModel>();
+
+                foreach (var user in usuariosIdentity)
                 {
-                    Email = user.Email,
-                    PhoneNumber = user.PhoneNumber,
-                    Nome = usuarioDto?.Nome,
-                    Idade = usuarioDto?.Idade.ToString(),
-                    Sobrenome = usuarioDto?.Sobrenome,
-                    Endereco = usuarioDto?.Endereco,
-                    Genero = usuarioDto?.Genero.ToString(),
-                });
+                    var usuarioDto = todosUsuarios.FirstOrDefault(x => x.IdIdentity.ToString() == user.Id);
+
+                    usersVM.Add(new UsuarioViewModel()
+                    {
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
+                        Nome = usuarioDto?.Nome,
+                        Idade = usuarioDto?.Idade.ToString(),
+                        Sobrenome = usuarioDto?.Sobrenome,
+                        Endereco = usuarioDto?.Endereco,
+                        Genero = usuarioDto?.Genero.ToString(),
+                    });
+                }
+
+                return View(usersVM);
             }
 
-            return View(usersVM);
+            else
+            {
+                var usersIdentity = userManager.Users.Where(p => p.UserName.ToLower()////////******/ 
+                     .Contains(searchString.ToLower()));
+
+
+                var usuarios = await _usuarioService.ObterUsuarioPorNome(searchString);
+
+
+                var usersViewM = new List<UsuarioViewModel>();
+
+                foreach (var user in usersIdentity)
+                {
+                    var usuarioDto = usuarios.FirstOrDefault(x => x.IdIdentity.ToString() == user.Id);
+
+                    usersViewM.Add(new UsuarioViewModel()
+                    {
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
+                        Nome = usuarioDto?.Nome,
+                        Idade = usuarioDto?.Idade.ToString(),
+                        Sobrenome = usuarioDto?.Sobrenome,
+                        Endereco = usuarioDto?.Endereco,
+                        Genero = usuarioDto?.Genero.ToString(),
+                    });
+                }
+
+
+                if (usersViewM.Any())
+                {
+                    ViewBag.Message = $"Foram encontrados {usersViewM.Count()} resultados para a pesquisa '{searchString}'";
+                }
+                else
+                {
+                    ViewBag.Message = $"Não foram encontrados resultados para a pesquisa '{searchString}'";
+                }
+
+                return View(usersViewM);
+            }
+
+            
         }
     }
 
 
-    
+
 }
