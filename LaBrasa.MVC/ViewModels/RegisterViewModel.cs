@@ -32,7 +32,7 @@ namespace LaBrasa.MVC.ViewModels
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Informe o seu telefone.")]
-        [StringLength(25)]
+        [StringLength(11)]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
