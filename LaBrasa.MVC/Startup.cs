@@ -102,7 +102,7 @@ namespace LaBrasa.MVC
 
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=WhatsApp}/{action=SendMessage}/{id?}");
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 
             });
