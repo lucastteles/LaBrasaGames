@@ -43,6 +43,16 @@ namespace LaBrasa.Infra.Ioc
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false; //Obriga a ter um numero na senha
+                                                       //options.Password.RequiredLength = 7; // valor default 8 digitos
+                options.Password.RequiredUniqueChars = 6; // minimos caracteres unicos
+                options.Password.RequireLowercase = false; // não é obrigatório começar com minusculo
+                options.Password.RequireNonAlphanumeric = false; // não é obrigatório alfanumerico
+                options.Password.RequireUppercase = false; // não é obrigatorio começar com maiusculo
+            });
+
             return services;
         }
     }

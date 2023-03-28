@@ -292,7 +292,10 @@ body {
         box-shadow: 0px 10px 40px #00000056;
         outline: none;
         box-sizing: border-box;
+        
     }
+
+
 
 
     .text-field > label {
@@ -746,6 +749,22 @@ table {
     border-color: #FF8F1B;
     border-radius: 25px;
     box-shadow: 0px 2px 10px #FF8F1B;
+}
+
+.btn-email {
+    width: 30%;
+    padding: 12px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #1C1C1C;
+    background: #FF8F1B;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ff9933;
 }
 
 

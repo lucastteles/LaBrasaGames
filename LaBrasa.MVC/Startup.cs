@@ -1,19 +1,14 @@
 using LaBrasa.Domain.Account;
-using LaBrasa.Infra.Data.Identity;
 using LaBrasa.Infra.Ioc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LaBrasa.MVC
 {
@@ -30,6 +25,7 @@ namespace LaBrasa.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddInfrastructure(Configuration);
+            services.AddControllers();
             //services.AddControllersWithViews();
 
             //services.AddAuthorization(options =>
@@ -49,13 +45,13 @@ namespace LaBrasa.MVC
                        .RequireAuthenticatedUser()
                        .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
-            }); 
+            });
 
-           
-           
 
-            
-           
+
+
+
+
             services.AddMemoryCache(); //Registrando os middes (Onde São Armazenados os Dados)
             services.AddSession(options => //Recurso para Salvar e Armazenar dados do Usuário
             {
