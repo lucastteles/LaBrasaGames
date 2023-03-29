@@ -1144,3 +1144,117 @@ footer {
         align-items: center;
     }
 }
+
+
+
+
+
+.container-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* chat box section */
+
+.chat-box {
+    width: 4000px;
+    height: 450px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.client {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    background-color: #111b21;
+    padding: 15px;
+}
+
+    .client img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+
+.client-info {
+    color: #fff;
+    padding: 15px;
+}
+
+    .client-info p {
+        color: #008000;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+
+#mobile {
+    border: 2px solid black;
+}
+
+#message {
+    border: 2px solid black;
+}
+
+.botao-enviar {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    margin-left: 1000px;
+}
+
+.link-botao{
+    padding:15px;
+}
+
+.roda-pé-chat {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 87px;
+    background-color: #111b21;
+    padding: 15px;
+}
+
+#link_message {
+    display: flex;
+    gap: 2rem;
+    
+}
+
+    #link_message .message-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        color: #fff;
+        border-radius: 50%;
+        transition: all 0.4s;
+    }
+
+        #link_message .message-link i {
+            font-size: 1.25rem;
+        }
+
+        #link_message .message-link:hover {
+            opacity: 0.8;
+        }
+
+
+#image {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#video {
+    background-color: #4267b3;
+}
+

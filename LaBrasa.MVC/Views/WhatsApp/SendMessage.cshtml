@@ -1,4 +1,5 @@
-﻿<h1>Send Message</h1>
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<h1>Send Message</h1>
 
    @if (ViewBag.Error != null)
 {
@@ -6,37 +7,53 @@
         @ViewBag.Error
     </div>
 }
+<div class="container-chat">
+    <!-- chat box -->
+    <div class="chat-box">
+        <!-- client -->
+        <div class="client">
+            <img src="~/images/LogoLabrasaGame-removebg-preview.png" alt="logo" />
+            <div class="client-info">
+                <h2>LaBrasa</h2>
+                <p>online</p>
+            </div>
+        </div>
 
-<form method="post">
+        <form method="post">
 
-    <div class="form-group">
+            <div class="form-group">
 
-        <label for="mobile"> Mobile Number:</label>
+                <label for="mobile"> Mobile Number:</label>
 
-        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Número de Telefone" required>
 
+            </div>
+
+            <div class="form-group">
+
+                <label for="message"> Message:</label>
+
+                <textarea class="form-control" id="message" name="message" placeholder="Mensagem" rows="3" required></textarea>
+
+            </div>
+
+            <button type="submit" class="botao-enviar">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <br />
+            <br />
+            <div class="roda-pé-chat">
+                <div id="link_message">
+                    <a href="#" class="message-link" id="image">
+                        <i class="fa-solid fa-image"></i>
+                    </a>
+                    <a href="#" class="message-link" id="video">
+                        <i class="fa-solid fa-video"></i>
+                    </a>
+                </div>
+            </div>
+
+        </form>
     </div>
-
-    <div class="form-group">
-
-        <label for="message"> Message:</label>
-
-        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-
-    </div>
-
-   @* <div class="form-group">
-        <label for="imageUrl">Image:</label>
-        <input type="text" class="form-control" id="imageUrl" name="imageUrl" placeholder="Enter image URL">
-    </div>
-
-    <div class="form-group">
-
-        <label for="captiontxt"> Caption:</label>
-
-        <textarea class="form-control" id="captiontxt" name="captiontxt" rows="3" required></textarea>
-
-    </div>*@
-
-    <button type="submit" class="btn btn-primary"> Send </button>
-</form>
+</div>
