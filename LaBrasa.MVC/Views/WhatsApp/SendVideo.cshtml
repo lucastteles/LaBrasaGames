@@ -1,4 +1,6 @@
-﻿<h1>Send Video</h1>
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<h1>Send Video</h1>
 
    @if (ViewBag.Error != null)
 {
@@ -7,28 +9,61 @@
     </div>
 }
 
-<form method="post">
+<div class="container-chat">
+    <!-- chat box -->
+    <div class="chat-box">
+        <!-- client -->
+        <div class="client">
+            <img src="~/images/LogoLabrasaGame-removebg-preview.png" alt="logo" />
+            <div class="client-info">
+                <h2>LaBrasa</h2>
+                <p>online</p>
+            </div>
+        </div>
 
-    <div class="form-group">
+        <form method="post">
 
-        <label for="mobile"> Mobile Number:</label>
+            <div class="form-group">
 
-        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+                <label for="mobile"> Número de Telefone:</label>
+
+                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Número de Telefone" required>
+
+            </div>
+
+            <div class="form-group">
+                <label for="videoUrl">Video:</label>
+                <input type="text" class="form-control" id="videoUrl" name="videoUrl" placeholder="Video URL">
+            </div>
+
+            <div class="form-group">
+
+                <label for="captiontxt"> Legenda:</label>
+
+                <textarea class="form-control" id="captiontxt" name="captiontxt" placeholder="legenda" rows="3" required></textarea>
+
+            </div>
+
+            <button type="submit" class="botao-enviar">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <br />
+            <br />
+
+            <div class="roda-pé-chat">
+                <div id="link_message">
+                    <a href="/WhatsApp/SendMessage" class="message-link" id="messagem">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </a>
+
+                    <a href="/WhatsApp/SendImage" class="message-link" id="image">
+                        <i class="fa-solid fa-image"></i>
+                    </a>
+                </div>
+            </div>
+
+        </form>
 
     </div>
-
-    <div class="form-group">
-        <label for="videoUrl">Video:</label>
-        <input type="text" class="form-control" id="videoUrl" name="videoUrl" placeholder="Enter Video URL">
-    </div>
-
-    <div class="form-group">
-
-        <label for="captiontxt"> Caption:</label>
-
-        <textarea class="form-control" id="captiontxt" name="captiontxt" rows="3" required></textarea>
-
-    </div>
-
-    <button type="submit" class="btn btn-primary"> Send </button>
-</form>
+</div>

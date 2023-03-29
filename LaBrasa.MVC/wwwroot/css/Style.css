@@ -1201,6 +1201,18 @@ footer {
     border: 2px solid black;
 }
 
+#videoUrl {
+    border: 2px solid black;
+}
+
+#captiontxt {
+    border: 2px solid black;
+}
+
+#imageUrl {
+    border: 2px solid black;
+}
+
 .botao-enviar {
     height: 2.8rem;
     width: 2.8rem;
@@ -1262,3 +1274,45 @@ footer {
     background-color: #4267b3;
 }
 
+
+/**************************************************/
+/*Email*/
+
+.container-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-box {
+    width: 4000px;
+    height: 450px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+#corpo {
+    border: 2px solid black;
+}
+
+#assunto {
+    border: 2px solid black;
+}
+
+.btn-enviar {
+    width: 95%;
+    padding: 12px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #1C1C1C;
+    background: #FF8F1B;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ff9933;
+}
