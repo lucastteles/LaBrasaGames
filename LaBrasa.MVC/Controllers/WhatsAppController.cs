@@ -16,7 +16,7 @@ namespace LaBrasa.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendMessage(string mobile, string message, string imageUrl, string captiontxt)
+        public async Task<IActionResult> SendMessage(string mobile, string message)
         {
             var url = $"https://api.ultramsg.com/instance41697/messages/chat";
             var client = new RestClient(url);
@@ -25,8 +25,59 @@ namespace LaBrasa.MVC.Controllers
             request.AddParameter("token", token);
             request.AddParameter("to", mobile);
             request.AddParameter("body", message);
+
+
+
+            RestResponse response = await client.ExecuteAsync(request);
+            var output = response.Content;
+            ViewBag.Response = output;
+            return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult SendImage()
+        {
+            return View();
+        }
+         
+        [HttpPost]
+        public async Task<IActionResult> SendImage(string mobile,  string imageUrl, string captiontxt)
+        {
+            var url = $"https://api.ultramsg.com/instance41697/messages/image";
+            var client = new RestClient(url);
+            var request = new RestRequest(url, Method.Post);
+            request.AddHeader("content-type", "application/x-www-form-urlencoded");
+            request.AddParameter("token", token);
+            request.AddParameter("to", mobile);
             request.AddParameter("image", imageUrl);
             request.AddParameter("caption", captiontxt);
+
+
+            RestResponse response = await client.ExecuteAsync(request);
+            var output = response.Content;
+            ViewBag.Response = output;
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult SendVideo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SendVideo(string mobile, string videoUrl, string captiontxt)
+        {
+            var url = $"https://api.ultramsg.com/instance41697/messages/video";
+            var client = new RestClient(url);
+            var request = new RestRequest(url, Method.Post);
+            request.AddHeader("content-type", "application/x-www-form-urlencoded");
+            request.AddParameter("token", token);
+            request.AddParameter("to", mobile);
+            request.AddParameter("video", videoUrl);
+            request.AddParameter("caption", captiontxt);
+             
 
             RestResponse response = await client.ExecuteAsync(request);
             var output = response.Content;
