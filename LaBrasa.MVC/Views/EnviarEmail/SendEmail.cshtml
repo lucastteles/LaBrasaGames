@@ -1,13 +1,13 @@
 ﻿
 
-<h2>Enviar Email</h2>
+<h2 class="titulo-email">Enviar Email</h2>
 
 @if (!string.IsNullOrEmpty(ViewBag.Message))
 {
     <div class="alert alert-success">@ViewBag.Message</div>
 }
 <div class="container-email">
-    <div class="chat-box">
+    <div class="email-box">
 
         <form method="post" enctype="multipart/form-data">
             @*<div class="form-group">

@@ -9,6 +9,31 @@ namespace LaBrasa.MVC.Controllers
         private readonly string instanceId = "instance41697";
         private readonly string token = "to9ohy3r0e3xnb1k";
 
+
+        //public async Task<IActionResult> GetApiResponseAsync()
+        //{
+        //    var url = "https://api.ultramsg.com/instance41697/instance/status";
+        //    var client = new RestClient(url);
+        //    var request = new RestRequest(url, Method.Get);
+        //    request.AddHeader("content-type", "application/x-www-form-urlencoded");
+        //    request.AddParameter("token", "to9ohy3r0e3xnb1k");
+
+        //    RestResponse response = await client.ExecuteAsync(request);
+        //    var output = response.Content;
+
+        //    return View(output);
+        //}
+
+
+        //public async Task<IActionResult> GetApi()
+        //{
+        //    WhatsAppController controller = new WhatsAppController();
+        //    IActionResult result = await controller.GetApiResponseAsync(); 
+
+        //    return result;
+        //}
+
+
         [HttpGet]
         public IActionResult SendMessage()
         {

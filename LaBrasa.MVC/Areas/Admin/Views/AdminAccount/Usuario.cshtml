@@ -1,15 +1,33 @@
 ﻿@model IEnumerable<LaBrasa.MVC.ViewModels.UsuarioViewModel>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body class="usuario-page">
+
+    <h3 class="titulo-usuario">Dados Dos Usuários</h3>
+
+    <div id="link_rota">
+        <a href="/WhatsApp/SendMessage" class="message-rota" id="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="/WhatsApp/SendMessage" <span style="color: white;" class="whatsapp-text">Envie uma mensagem no WhatsApp</span></a>
+    </div>
+   
+    <div id="link_rota">
+    <a href="/EnviarEmail/SendEmail" class="message-rota" id="enviaremail">
+        <i class="fa-sharp fa-solid fa-envelope"></i>
+    </a>
+     <a href="/EnviarEmail/SendEmail"<span style="color: white;" class="whatsapp-text">Envie uma mensagem no Email</span></a>
+    </div>
+
+
     <div class="body-barra">
         <form class="navbar-form navbar-right" asp-controller="AdminAccount" asp-action="Search" method="get">
             <div class="barra-pesquisa">
-                <input type="text" class="form-control" placeholder="Procurar Usuário" name="searchString" value="@ViewData["searchString"]">
+                <input type="text" class="form-control" placeholder="Procurar Usuário" name="searchString" value="@ViewData["searchString"]" id="barra-pesquisa">
+                <button class="pesquisa"><i class="fa-brands fa-searchengin"></i></button>
             </div>
         </form>
     </div>
-     <a href="/EnviarEmail/SendEmail"><button class="btn-email">Enviar Email</button></a>
-     <a href="/WhatsApp/SendVideo"><button class="btn-email">WhatsApp</button></a>
 
     <div class="container-usuario">
         <table>
