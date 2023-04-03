@@ -824,42 +824,186 @@ table {
 }
 
 
-
-
-
-/*.botao-whatsapp {
-    height: 2.8rem;
-    width: 6.8rem;
-    border-radius: 15%;
-    background-color: #4CAF50;
-    border: none;
-    color: #fff;
-    margin-top: 15px
-}
-
-.botao-email {
-    height: 2.8rem;
-    width: 6.8rem;
-    border-radius: 15%;
-    background-color: #db4a39;
-    border: none;
-    color: #fff;
-    margin-top: 15px
-}*/
-
-/*.link-botao {
-        padding: 15px;
-    }*/
-
-
-
-
-
 .container-usuario {
     margin-top: 40px;
 }
 
 
+
+
+
+/* chat box section */
+.container-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.chat-box {
+    width: 4000px;
+    height: 450px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.client {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    background-color: #111b21;
+    padding: 15px;
+}
+
+    .client img {
+        width: 60px;
+        height: 65px;
+        border-radius: 50%;
+    }
+
+
+.client-info {
+    color: #fff;
+    padding: 15px;
+}
+
+    .client-info p {
+        color: #008000;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+
+#mobile {
+    border: 2px solid black;
+}
+
+#message {
+    border: 2px solid black;
+}
+
+#videoUrl {
+    border: 2px solid black;
+}
+
+#captiontxt {
+    border: 2px solid black;
+}
+
+#imageUrl {
+    border: 2px solid black;
+}
+
+.botao-enviar {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    margin-left: 1000px;
+}
+
+.link-botao {
+    padding: 15px;
+}
+
+.roda-pé-chat {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 87px;
+    background-color: #111b21;
+    padding: 15px;
+}
+
+#link_message {
+    display: flex;
+    gap: 2rem;
+}
+
+    #link_message .message-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        color: #fff;
+        border-radius: 50%;
+        transition: all 0.4s;
+    }
+
+        #link_message .message-link i {
+            font-size: 1.25rem;
+        }
+
+        #link_message .message-link:hover {
+            opacity: 0.8;
+        }
+
+
+#image {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#messagem {
+    background-color: #D2691E;
+}
+
+#video {
+    background-color: #4267b3;
+}
+
+
+/**************************************************/
+/*Email*/
+
+.container-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-email {
+    color: white;
+    text-align: center;
+}
+
+.email-box {
+    width: 4000px;
+    height: 450px;
+    background-color: #1C1C1C;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+#corpo {
+    border: 4px solid #FF8F1B;
+}
+
+#assunto {
+    border: 4px solid #FF8F1B;
+}
+
+.btn-enviar {
+    width: 95%;
+    padding: 12px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #1C1C1C;
+    background: #FF8F1B;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ff9933;
+}
 
 
 
@@ -901,6 +1045,11 @@ table {
 .left-contato {
     margin-left: 20px;
 }
+
+
+
+
+
 
 
 /*PERFIL SMARTPHONE*/
@@ -1232,177 +1381,62 @@ footer {
 }
 
 
+@media only screen and (max-width: 950px) {
 
-
-
-.container-chat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* chat box section */
+@media only screen and (max-width: 600px) {
 
-.chat-box {
-    width: 4000px;
-    height: 450px;
-    background-color: #fff;
-    overflow: hidden;
-    border-radius: 10px;
-    position: relative;
-}
-
-.client {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    height: 80px;
-    background-color: #111b21;
-    padding: 15px;
-}
-
-    .client img {
-        width: 60px;
-        height: 65px;
-        border-radius: 50%;
-    }
-
-
-.client-info {
-    color: #fff;
-    padding: 15px;
-}
-
-    .client-info p {
-        color: #008000;
-        font-weight: bold;
-        font-size: 0.8em;
-    }
-
-#mobile {
-    border: 2px solid black;
-}
-
-#message {
-    border: 2px solid black;
-}
-
-#videoUrl {
-    border: 2px solid black;
-}
-
-#captiontxt {
-    border: 2px solid black;
-}
-
-#imageUrl {
-    border: 2px solid black;
-}
-
-.botao-enviar {
-    height: 2.8rem;
-    width: 2.8rem;
-    border-radius: 50%;
-    background-color: #4CAF50;
-    border: none;
-    color: #fff;
-    margin-left: 1000px;
-}
-
-.link-botao {
-    padding: 15px;
-}
-
-.roda-pé-chat {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    height: 87px;
-    background-color: #111b21;
-    padding: 15px;
-}
-
-#link_message {
-    display: flex;
-    gap: 2rem;
-}
-
-    #link_message .message-link {
+    #link_rota .message-rota {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 2.5rem;
-        width: 2.5rem;
-        color: #fff;
+        height: 3.2rem;
+        width: 5.2rem;
         border-radius: 50%;
-        transition: all 0.4s;
+        margin-left: -30px;
+    }
+}
+
+
+
+/*Smartphone Chat Box WhatsApp*/
+
+@media only screen and (max-width: 950px) {
+}
+
+@media only screen and (max-width: 600px) {
+    .container-chat {
+        width: 350px;
+        margin-left: -60px
     }
 
-        #link_message .message-link i {
-            font-size: 1.25rem;
+    .chat-box {
+        height: 60vh;
+    }
+
+    .client-info {
+        color: #fff;
+        margin-left: -50px
+    }
+
+        .client-info p {
+            color: #008000;
+            font-weight: bold;
+            font-size: 0.8em;
         }
 
-        #link_message .message-link:hover {
-            opacity: 0.8;
-        }
 
+    .roda-pé-chat {
+        margin-top: -4px;
+    }
 
-#image {
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-}
-
-#messagem {
-    background-color: #D2691E;
-}
-
-#video {
-    background-color: #4267b3;
+    .botao-enviar {
+        margin-left: 270px;
+        margin-top: 24%;
+    }
 }
 
 
-/**************************************************/
-/*Email*/
 
-.container-email {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.titulo-email {
-    color: white;
-    text-align: center;
-}
-
-.email-box {
-    width: 4000px;
-    height: 450px;
-    background-color: #1C1C1C;
-    overflow: hidden;
-    border-radius: 10px;
-    position: relative;
-}
-
-#corpo {
-    border: 4px solid #FF8F1B;
-}
-
-#assunto {
-    border: 4px solid #FF8F1B;
-}
-
-.btn-enviar {
-    width: 95%;
-    padding: 12px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #1C1C1C;
-    background: #FF8F1B;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #ff9933;
-}
